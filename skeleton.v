@@ -47,7 +47,7 @@ module skeleton(resetn,
 	wire [7:0]  ps2_out;
 	
 	wire        player1_key_pressed, player2_key_pressed;	
-	wire [3:0]  player1_arrow_input, player2_arrow_input;
+	wire [7:0]  player1_arrow_input, player2_arrow_input;
 	wire [9:0]  player1_score,       player2_score;
 	
 	// clock divider (by 5, i.e., 10 MHz)
