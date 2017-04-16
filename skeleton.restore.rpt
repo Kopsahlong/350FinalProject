@@ -1,6 +1,6 @@
 Restore Archived Project report for skeleton
-Thu Mar 30 13:54:44 2017
-Quartus Prime Version 16.0.2 Build 222 07/20/2016 SJ Lite Edition
+Wed Apr 05 15:01:44 2017
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
 ---------------------
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Thu Mar 30 13:54:44 2017 ;
+; Restore Archived Project Status ; Successful - Wed Apr 05 15:01:44 2017 ;
 ; Revision Name                   ; skeleton                              ;
 ; Top-level Entity Name           ; skeleton                              ;
 ; Family                          ; Cyclone IV E                          ;
@@ -47,13 +47,13 @@ agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Users/klo14/Downloads/skeleton_for_processor.qar' into the 'C:/Users/klo14/Downloads/skeleton_for_processor_restored/' directory
+Info: Successfully restored 'C:/Users/Student/Downloads/lab7_skeleton (1).qar' into the 'C:/Users/Student/Downloads/lab7_skeleton (1)_restored/' directory
 Info: Generated report 'skeleton.restore.rpt'
-Info (23030): Evaluation of Tcl script c:/altera_lite/16.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info (23030): Evaluation of Tcl script c:/altera/16.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 505 megabytes
-    Info: Processing ended: Thu Mar 30 13:54:44 2017
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 555 megabytes
+    Info: Processing ended: Wed Apr 05 15:01:44 2017
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:01
 
 
@@ -65,7 +65,6 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; qar_info.json                    ;
 ; Altera_UP_PS2_Command_Out.v      ;
 ; Altera_UP_PS2_Data_In.v          ;
-; CP4_processor_netid.v            ;
 ; Hexadecimal_To_Seven_Segment.v   ;
 ; PS2_Controller.v                 ;
 ; PS2_Interface.v                  ;
@@ -88,12 +87,15 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; img_index.v                      ;
 ; index.mif                        ;
 ; index_logo.mif                   ;
+; lab7_img_data.mif                ;
+; lab7_img_index.mif               ;
 ; lcd.sv                           ;
 ; pll.bsf                          ;
 ; pll.cmp                          ;
 ; pll.ppf                          ;
 ; pll.qip                          ;
 ; pll.v                            ;
+; processor.v                      ;
 ; skeleton.qpf                     ;
 ; skeleton.qsf                     ;
 ; skeleton.v                       ;

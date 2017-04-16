@@ -4,179 +4,215 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "debug_data_in[0]",
+					"name" : "lcd_data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[1]",
+					"name" : "lcd_data[1]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[2]",
+					"name" : "lcd_data[2]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[3]",
+					"name" : "lcd_data[3]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[4]",
+					"name" : "lcd_data[4]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[5]",
+					"name" : "lcd_data[5]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[6]",
+					"name" : "lcd_data[6]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[7]",
+					"name" : "lcd_data[7]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[8]",
+					"name" : "lcd_en",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[9]",
+					"name" : "lcd_rs",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[10]",
+					"name" : "seg1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[11]",
+					"name" : "seg1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[12]",
+					"name" : "seg1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[13]",
+					"name" : "seg1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[14]",
+					"name" : "seg1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[15]",
+					"name" : "seg1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[16]",
+					"name" : "seg1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[17]",
+					"name" : "seg2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[18]",
+					"name" : "seg2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[19]",
+					"name" : "seg2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[20]",
+					"name" : "seg2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[21]",
+					"name" : "seg2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[22]",
+					"name" : "seg2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[23]",
+					"name" : "seg2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[24]",
+					"name" : "VGA_HS",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[25]",
+					"name" : "VGA_VS",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[26]",
+					"name" : "VGA_BLANK",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[27]",
+					"name" : "VGA_R[0]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[28]",
+					"name" : "VGA_R[1]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[29]",
+					"name" : "VGA_R[2]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[30]",
+					"name" : "VGA_R[3]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_data_in[31]",
+					"name" : "VGA_R[4]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[0]",
+					"name" : "VGA_R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[1]",
+					"name" : "VGA_R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[2]",
+					"name" : "VGA_R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[3]",
+					"name" : "VGA_G[0]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[4]",
+					"name" : "VGA_G[1]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[5]",
+					"name" : "VGA_G[2]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[6]",
+					"name" : "VGA_G[3]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[7]",
+					"name" : "VGA_G[4]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[8]",
+					"name" : "VGA_G[5]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[9]",
+					"name" : "VGA_G[6]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[10]",
+					"name" : "VGA_G[7]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_addr[11]",
+					"name" : "VGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_clock",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
 					"strict" : false
 				},
 				{
@@ -185,6 +221,38 @@
 				},
 				{
 					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "color_select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "color_select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "color_select[2]",
+					"strict" : false
+				},
+				{
+					"name" : "color_select[3]",
+					"strict" : false
+				},
+				{
+					"name" : "color_select[4]",
+					"strict" : false
+				},
+				{
+					"name" : "color_select[5]",
+					"strict" : false
+				},
+				{
+					"name" : "color_select[6]",
+					"strict" : false
+				},
+				{
+					"name" : "color_select[7]",
 					"strict" : false
 				}
 			]

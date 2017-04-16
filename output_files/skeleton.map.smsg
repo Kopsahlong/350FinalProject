@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at CP4_processor_netid.v(241): object "readAwbWrite" differs only in case from object "readAwbwrite" in the same scope File: C:/altera_lite/16.0/Projects/CP4_processor_klo14/CP4_processor_netid.v Line: 241
-Warning (10273): Verilog HDL warning at CP4_processor_netid.v(622): extended using "x" or "z" File: C:/altera_lite/16.0/Projects/CP4_processor_klo14/CP4_processor_netid.v Line: 622
