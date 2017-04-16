@@ -5,9 +5,13 @@ module vga_controller(iRST_n,
                       oVS,
                       b_data,
                       g_data,
-                      r_data);
+                      r_data,
+							 select);
+
+	
 input iRST_n;
 input iVGA_CLK;
+input [7:0] select;
 output reg oBLANK_n;
 output reg oHS;
 output reg oVS;
@@ -47,9 +51,13 @@ img_data	img_data_inst (
 	.clock ( VGA_CLK_n ),
 	.q ( index )
 	);
+	
+/////////////////////////
+//////Add switch-input logic here
+	
 //////Color table output
 img_index	img_index_inst (
-	.address ( index ),
+	.address ( select ),
 	.clock ( iVGA_CLK ),
 	.q ( bgr_data_raw)
 	);	
@@ -58,7 +66,7 @@ img_index	img_index_inst (
 always@(posedge VGA_CLK_n) bgr_data <= bgr_data_raw;
 assign b_data = bgr_data[23:16];
 assign g_data = bgr_data[15:8];
-assign r_data = bgr_data[7:0];
+assign r_data = bgr_data[7:0]; 
 ///////////////////
 //////Delay the iHD, iVD,iDEN for one clock cycle;
 always@(negedge iVGA_CLK)

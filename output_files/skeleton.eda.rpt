@@ -1,6 +1,6 @@
 EDA Netlist Writer report for skeleton
-Wed Apr 05 14:29:56 2017
-Quartus Prime Version 16.0.2 Build 222 07/20/2016 SJ Lite Edition
+Wed Apr 05 16:32:36 2017
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
 ---------------------
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Apr 05 14:29:56 2017 ;
+; EDA Netlist Writer Status ; Successful - Wed Apr 05 16:32:36 2017 ;
 ; Revision Name             ; skeleton                              ;
 ; Top-level Entity Name     ; skeleton                              ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                             ;
-+--------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                        ;
-+--------------------------------------------------------------------------------------------------------+
-; C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/skeleton_7_1200mv_85c_slow.vo     ;
-; C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/skeleton_7_1200mv_0c_slow.vo      ;
-; C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/skeleton_min_1200mv_0c_fast.vo    ;
-; C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/skeleton.vo                       ;
-; C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/skeleton_7_1200mv_85c_v_slow.sdo  ;
-; C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/skeleton_7_1200mv_0c_v_slow.sdo   ;
-; C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/skeleton_min_1200mv_0c_v_fast.sdo ;
-; C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/skeleton_v.sdo                    ;
-+--------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                  ;
++-------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                             ;
++-------------------------------------------------------------------------------------------------------------+
+; C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/skeleton_7_1200mv_85c_slow.vo     ;
+; C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/skeleton_7_1200mv_0c_slow.vo      ;
+; C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/skeleton_min_1200mv_0c_fast.vo    ;
+; C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/skeleton.vo                       ;
+; C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/skeleton_7_1200mv_85c_v_slow.sdo  ;
+; C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/skeleton_7_1200mv_0c_v_slow.sdo   ;
+; C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/skeleton_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/skeleton_v.sdo                    ;
++-------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,21 +88,22 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 16.0.2 Build 222 07/20/2016 SJ Lite Edition
-    Info: Processing started: Wed Apr 05 14:29:52 2017
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Wed Apr 05 16:32:34 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off skeleton -c skeleton
-Info (204019): Generated file skeleton_7_1200mv_85c_slow.vo in folder "C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file skeleton_7_1200mv_0c_slow.vo in folder "C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file skeleton_min_1200mv_0c_fast.vo in folder "C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file skeleton.vo in folder "C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file skeleton_7_1200mv_85c_v_slow.sdo in folder "C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file skeleton_7_1200mv_0c_v_slow.sdo in folder "C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file skeleton_min_1200mv_0c_v_fast.sdo in folder "C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file skeleton_v.sdo in folder "C:/altera_lite/16.0/Projects/CP4_processor_klo14/simulation/modelsim/" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 771 megabytes
-    Info: Processing ended: Wed Apr 05 14:29:56 2017
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file skeleton_7_1200mv_85c_slow.vo in folder "C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file skeleton_7_1200mv_0c_slow.vo in folder "C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file skeleton_min_1200mv_0c_fast.vo in folder "C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file skeleton.vo in folder "C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file skeleton_7_1200mv_85c_v_slow.sdo in folder "C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file skeleton_7_1200mv_0c_v_slow.sdo in folder "C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file skeleton_min_1200mv_0c_v_fast.sdo in folder "C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file skeleton_v.sdo in folder "C:/Users/Student/Downloads/lab7_skeleton (1)_restored/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 735 megabytes
+    Info: Processing ended: Wed Apr 05 16:32:36 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
