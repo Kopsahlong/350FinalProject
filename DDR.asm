@@ -61,15 +61,15 @@ addi $11, $0, indexPtr
 addi $11, $11, numStates // set $11 = max index to set
 bne $10, $11, stateChangeLoop // if $10 is max index to set, continue to --> generateRandomNumber --> feedNewArrow
 generateRandomNumber: 
-lw $10, 555($0) // load in constant a - should be a large number
-lw $11, 556($0) // load in constant b - should be a large number, but not large enough to cause an overflow
+addi $10, $0, 5555555555 // load in constant a - should be a large number
+addi $11, $0, 1234567890 // load in constant b - should be a large number, but not large enough to cause an overflow
 mul $12, $4, $10 // multiply previous random number by value a
 add $13, $12, $11 // add value b //TODO fix nick's addi instructions and figure out this algorithm and dmem addressing
-lw $10, 8($0) // read in mod value // I changed this from addi to lw, is that what you meant? -A
+addi $10, $0, 8 // read in mod value // I changed this from addi to lw, is that what you meant? -A
 div $14, $13, $10  // divide by the mod value
 mul $11, $10, $14 // multiply result by mod value
 sub $4, $13, $11 // subtract out multiplied value to take the real mod --> store in randomNumber
-lw $10, 5($0) // make check value // I changed this from addi to lw, is that what you meant? -A
+addi $10, $0, 5 // make check value // I changed this from addi to lw, is that what you meant? -A
 blt $10, $4, generateRandomNumber // if the value is not within scope, get another one.
 feedNewArrow:
 addi $3, $3, 1 // increment counterSinceLastArrow

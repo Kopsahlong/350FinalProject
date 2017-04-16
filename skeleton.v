@@ -116,16 +116,8 @@ module skeleton(resetn,
 	//TODO: write "Player 1 winning!" or "Player 2 winning!" "Score is tied!" to lcd based on scores 
 	
 	// SEVEN SEGMENT DISPLAYS
-	Hexadecimal_To_Seven_Segment hex1(4'b0, seg1);
-	Hexadecimal_To_Seven_Segment hex2(4'b0, seg2);
-	Hexadecimal_To_Seven_Segment hex3(4'b0, seg3);
-	Hexadecimal_To_Seven_Segment hex4(4'b0, seg4);
-	Hexadecimal_To_Seven_Segment hex5(4'b0, seg5);
-	Hexadecimal_To_Seven_Segment hex6(4'b0, seg6);
-	Hexadecimal_To_Seven_Segment hex7(4'b0, seg7);
-	Hexadecimal_To_Seven_Segment hex8(4'b0, seg8);
-	// TODO find way to assign player1_score and player2_score to
-	// seg4-seg1 and seg8-seg5 respectively, positive or negative
+	binary_to_seven_segment_converter(player1_score, seg1, seg2, seg3, seg4);
+	binary_to_seven_segment_converter(player2_score, seg5, seg6, seg7, seg8);
 	
 	// some LEDs that you could use for debugging if you wanted
 	assign leds = 8'b00101011;
