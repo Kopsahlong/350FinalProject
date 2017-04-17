@@ -56,9 +56,12 @@ module skeleton(resetn,
 	
 	// UNCOMMENT FOLLOWING LINE AND COMMENT ABOVE LINE TO RUN AT 50 MHz
 	assign clock = inclock;
+	
+	wire game_reset;
+	assign game_reset = (~resetn || (ps2_out == 8'h2d)) ? 1'b1 : 1'b0;
 
-	processor player1_processor(.clock(clock), .reset(~resetn), .ps2_key_pressed(player1_key_pressed), .ps2_out(player1_arrow_input), .score(player1_score), .dmem_data_in(dmem_data_in_player1), .dmem_address(dmem_address_player1), .dmem_out(dmem_out_player1), .player1(1'b1));
-	processor player2_processor(.clock(clock), .reset(~resetn), .ps2_key_pressed(player2_key_pressed), .ps2_out(player2_arrow_input), .score(player2_score), .dmem_data_in(dmem_data_in_player2), .dmem_address(dmem_address_player2), .dmem_out(dmem_out_player2), .player1(1'b0));
+	processor player1_processor(.clock(clock), .reset(game_reset), .ps2_key_pressed(player1_key_pressed), .ps2_out(player1_arrow_input), .score(player1_score), .dmem_data_in(dmem_data_in_player1), .dmem_address(dmem_address_player1), .dmem_out(dmem_out_player1), .player1(1'b1));
+	processor player2_processor(.clock(clock), .reset(game_reset), .ps2_key_pressed(player2_key_pressed), .ps2_out(player2_arrow_input), .score(player2_score), .dmem_data_in(dmem_data_in_player2), .dmem_address(dmem_address_player2), .dmem_out(dmem_out_player2), .player1(1'b0));
 	
 	// keyboard controller
 	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
@@ -116,8 +119,8 @@ module skeleton(resetn,
 	//TODO: write "Player 1 winning!" or "Player 2 winning!" "Score is tied!" to lcd based on scores 
 	
 	// SEVEN SEGMENT DISPLAYS
-	binary_to_seven_segment_converter(player1_score, seg1, seg2, seg3, seg4);
-	binary_to_seven_segment_converter(player2_score, seg5, seg6, seg7, seg8);
+	binary_to_seven_segment_converter(player1_score, seg5, seg6, seg7, seg8);
+	binary_to_seven_segment_converter(player2_score, seg1, seg2, seg3, seg4);
 	
 	// some LEDs that you could use for debugging if you wanted
 	assign leds = 8'b00101011;
