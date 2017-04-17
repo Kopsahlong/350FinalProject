@@ -33,7 +33,7 @@ video_sync_generator LTM_ins (.vga_clk(iVGA_CLK),
                               .HS(cHS),
                               .VS(cVS));
 ////
-////Addresss generator
+////Address generator
 always@(posedge iVGA_CLK,negedge iRST_n)
 begin
   if (!iRST_n)
@@ -49,7 +49,7 @@ assign VGA_CLK_n = ~iVGA_CLK;
 img_data	img_data_inst (
 	.address ( ADDR ),
 	.clock ( VGA_CLK_n ),
-	.q ( index )
+	.q ( index ) // Index output 
 	);
 	
 /////////////////////////

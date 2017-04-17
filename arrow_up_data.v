@@ -37,14 +37,14 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-module arrow_up (
+module arrow_up_data (
 	address,
 	clock,
 	q);
 
 	input	[7:0]  address;
 	input	  clock;
-	output	[23:0]  q;
+	output	[7:0]  q;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
