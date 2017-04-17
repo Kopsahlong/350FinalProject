@@ -1,5 +1,7 @@
-module index_identifier(address, clock, index){
+module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock, index){
 	input [18:0] address;
+	input [19:0][2:0] arrow_array; 
+	input [1:0] p1_indicator, p2_indicator;
 	input clock;
 	output [7:0] index;
 
@@ -28,28 +30,72 @@ module index_identifier(address, clock, index){
 		.clock(clock),
 		.q(arrow_right_index))
 
+	// TODO: add in lightning bolt 
 
 	// data memory to pull from game logic 
-
 
 	// hard coded constants that can be changed
 	parameter SCREEN_WIDTH = 640;
 	parameter SCREEN_HEIGHT = 480;
-	parameter ARROW_WIDTH = 40;
+	parameter PLAY_HEIGHT = 427;
 	parameter PLAYER_BORDER = SCREEN_WIDTH/2;
 	parameter LANE_WIDTH = SCREEN_WIDTH/10;
 	parameter LANE_HEIGHT = LANE_WIDTH;
-	parameter INDICATOR_PANEL_HEIGHT = SCREEN_WIDTH/4 - LANE_HEIGHT;
-	parameter INDICATOR_PANEL_WIDTH =  SCREEN_WIDTH/2;
-	parameter OVERLAP_NUMBER = 2; // number of overlapping arrows
-	parameter N = SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT; // number of states 
+	parameter INDICATOR_PANEL_HEIGHT = SCREEN_HEIGHT-PLAY_HEIGHT; //53
+	parameter INDICATOR_PANEL_WIDTH =  SCREEN_WIDTH/2; // 320
 
 	// check which grid area the address falls into 
-	parameter pixel_width = // some function of the address
-	parameter pixel_height = // some function of the address
+	parameter pixel_width = address/SCREEN_WIDTH; // some function of the address
+	parameter pixel_height = SCREEN_WIDTH - address%SCREEN_WIDTH; // some function of the address
 
 	// PLAYER 1 ARROW ADDRESS
 	// range HEIGHT = [0 -> SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT] and WIDTH = [0 -> PLAYER_BORDER]
+	assign in_arrow_range = (pixel_height < (SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT));
+	assign in_indicator_range = (pixel_height > (SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT));
+	assign in_p1_range = (pixel_width < PLAYER_BORDER);
+	assign in_p2_range = (pixel_width > PLAYER_BORDER);
+	assign in_p1_arrow_range = (in_arrow_range) & (in_p1_range));
+	assign in_p2_arrow_range = (in_arrow_range) & (in_p2_range);
+	assign in_p1_indicator_range = (in_indicator_range) & (in_p1_range); 
+	assign in_p2_indicator_range = (in_indicator_range) & (in_p2_range); 
+
+	// TODO: extract out to a module
+	if(in_p1_indicator_range) begin
+		// congifgure hex values for each category
+		assign index_excellent = 6'H39FF14; // green
+		assign index_good = 6'HFF7435; // orange
+		assign index_bad = 6'HD82735; // red
+		assign index_default = 6'H06A9FC; // blue
+
+		// check whether each category is true
+		assign is_excellent = p1_indicator == 2'b11;
+		assign is_good = p1_indicator == 2'b10;
+		assign is_bad = p1_indicator == 2'b01;
+
+		// assign index 
+		assign index0 = is_excellent ? index_excellent : index_default;
+		assign index1 = is_good ? index_good : index0;
+		assign index = is_bad ? index_bad : index1;
+	end
+
+	if(in_p1_indicator_range) begin
+		// congifgure hex values for each category
+		assign index_excellent = 6'H39FF14; // green
+		assign index_good = 6'HFF7435; // orange
+		assign index_bad = 6'HD82735; // red
+		assign index_default = 6'H06A9FC; // blue
+
+		// check whether each category is true
+		assign is_excellent = p1_indicator == 2'b11;
+		assign is_good = p1_indicator == 2'b10;
+		assign is_bad = p1_indicator == 2'b01;
+
+		// assign index 
+		assign index0 = is_excellent ? index_excellent : index_default;
+		assign index1 = is_good ? index_good : index0;
+		assign index = is_bad ? index_bad : index1;
+	end
+
 
 	// based on pixel height, identify corresponding N state
 
