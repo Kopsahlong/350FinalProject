@@ -1,10 +1,10 @@
 module binary_to_seven_segment_converter(binary_input_10b, seg1_output, seg2_output, seg3_output, seg4_output);
-	// code adapted from http://www.deathbylogic.com/2013/12/binary-to-binary-coded-decimal-bcd-converter/
+	// code adapted from http://verilogcodes.blogspot.com/2015/10/verilog-code-for-8-bit-binary-to-bcd.html
 	input [9:0] binary_input_10b;
 	output [6:0] seg1_output, seg2_output, seg3_output, seg4_output;
 
 	wire negative;
-	assign negative = binary_input_10b ? 1'b1 : 1'b0;
+	assign negative = binary_input_10b[9] ? 1'b1 : 1'b0;
 	wire [7:0] inverted_input;
 
 	wire [31:0] to_invert, inverted;
@@ -13,49 +13,39 @@ module binary_to_seven_segment_converter(binary_input_10b, seg1_output, seg2_out
 	inverter_32b B_inverter(.to_invert(to_invert), .inverted(inverted));
 	assign inverted_input = inverted[7:0];
 	
-	// I/O Signal Definitions
-	wire  [7:0] number;
-	assign number = negative ? inverted_input : binary_input_10b[7:0];
-	reg [3:0] hundreds;
-	reg [3:0] tens;
-	reg [3:0] ones;
-   
-   // Internal variable for storing bits
-   reg [19:0] shift;
-   integer i;
-   
-   always @(number)
-   begin
-      // Clear previous number and store new number in shift register
-      shift[19:8] = 0;
-      shift[7:0] = number;
-      
-      // Loop eight times
-      for (i=0; i<8; i=i+1) begin
-         if (shift[11:8] >= 5)
-            shift[11:8] = shift[11:8] + 3;
-            
-         if (shift[15:12] >= 5)
-            shift[15:12] = shift[15:12] + 3;
-            
-         if (shift[19:16] >= 5)
-            shift[19:16] = shift[19:16] + 3;
-         
-         // Shift entire register left once
-         shift = shift << 1;
-      end
-      
-      // Push decimal numbers to output
-      hundreds = shift[19:16];
-      tens     = shift[15:12];
-      ones     = shift[11:8];
-   end
+    
+    //input ports and their sizes
+    wire [7:0] bin;
+	 assign bin = negative ? inverted_input : binary_input_10b[7:0];
+    //output ports and, their size
+    //wire [11:0] bcd;
+    //Internal variables
+    reg [11 : 0] bcd; 
+     reg [3:0] i;   
+     
+     //Always block - implement the Double Dabble algorithm
+     always @(bin)
+        begin
+            bcd = 0; //initialize bcd to zero.
+            for (i = 0; i < 8; i = i+1) //run for 8 iterations
+            begin
+                bcd = {bcd[10:0],bin[7-i]}; //concatenation
+                    
+                //if a hex digit of 'bcd' is more than 4, add 3 to it.  
+                if(i < 7 && bcd[3:0] > 4) 
+                    bcd[3:0] = bcd[3:0] + 3;
+                if(i < 7 && bcd[7:4] > 4)
+                    bcd[7:4] = bcd[7:4] + 3;
+                if(i < 7 && bcd[11:8] > 4)
+                    bcd[11:8] = bcd[11:8] + 3;  
+            end
+        end     
 
    // assign numbers to seven seg displays
-   assign seg4_output = negative ? 7'b1111111 : 7'b0111111;
-   numToSegment seg3_encoder(.number(hundreds), .seg(seg3_output));
-   numToSegment seg2_encoder(.number(tens), .seg(seg2_output));
-   numToSegment seg1_encoder(.number(ones), .seg(seg1_output));
+   assign seg4_output = negative ? 7'b0111111 : 7'b1111111;
+   numToSegment seg3_encoder(.number(bcd[11:8]), .seg(seg3_output));
+   numToSegment seg2_encoder(.number(bcd[7:4]), .seg(seg2_output));
+   numToSegment seg1_encoder(.number(bcd[3:0]), .seg(seg1_output));
  
 endmodule
 
