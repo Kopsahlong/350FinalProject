@@ -53,6 +53,7 @@ stateChange:
 addi $1, $0, 0 // reset clockCycle to 0
 addi $2, $0, noKeyInput // reset lastKeyInput to noKeyInput
 addi $10, $0, indexPtr // shift all arrowInstructions up, starting at indexPtr
+addi $5, $5, 1 //TODO delete this, using this to test state updating and seven segment display
 stateChangeLoop:
 lw $11, 0($10) // load from $10
 addi $10, $10, 1 // increment $10

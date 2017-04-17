@@ -49,13 +49,13 @@ module binary_to_seven_segment_converter(binary_input_10b, seg1_output, seg2_out
       hundreds = shift[19:16];
       tens     = shift[15:12];
       ones     = shift[11:8];
-
-      // assign numbers to seven seg displays
-      assign seg4_output = negative ? 7'b1111111 : 7'b0111111;
-      numToSegment(.number(hundreds), .seg(seg3_output));
-      numToSegment(.number(tens), .seg(seg2_output));
-      numToSegment(.number(ones), .seg(seg1_output));
    end
+
+   // assign numbers to seven seg displays
+   assign seg4_output = negative ? 7'b1111111 : 7'b0111111;
+   numToSegment seg3_encoder(.number(hundreds), .seg(seg3_output));
+   numToSegment seg2_encoder(.number(tens), .seg(seg2_output));
+   numToSegment seg1_encoder(.number(ones), .seg(seg1_output));
  
 endmodule
 
