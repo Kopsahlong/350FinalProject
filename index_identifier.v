@@ -5,8 +5,8 @@ module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock,
 	input clock;
 	output [7:0] index;
 
-	wire [18:0] arrow_left_addr, arrow_up_addr, arrow_down_addr, arrow_right_addr;
-	wire [7:0] arrow_left_index, arrow_up_index, arrow_down_index, arrow_right_index;
+	wire [18:0] arrow_left_addr, arrow_up_addr, arrow_down_addr, arrow_right_addr, shakeyshake_addr;
+	wire [7:0] arrow_left_index, arrow_up_index, arrow_down_index, arrow_right_index, shakeyshake_index;
 
 
 	// data blocks needed to load images
@@ -29,6 +29,11 @@ module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock,
 		.address(arrow_right_addr),
 		.clock(clock),
 		.q(arrow_right_index))
+
+	shakeyshake_data my_arrow_right_data(
+		.address(shakeyshake_addr),
+		.clock(clock),
+		.q(shakeyshake_index))
 
 	// TODO: add in lightning bolt 
 
@@ -65,14 +70,14 @@ module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock,
 
 	// assign address to a lane type
 	assign lane_type;
-	assign in_bolt_range = (diff_x<LANE_WIDTH);
+	assign in_shake_range = (diff_x<LANE_WIDTH);
 	assign in_left_range = (LANE_WIDTH<=diff_x<2*LANE_WIDTH);
 	assign in_up_range = (2*LANE_WIDTH<=diff_x<3*LANE_WIDTH);
 	assign in_down_range = (3*LANE_WIDTH<=diff_x<4*LANE_WIDTH);
 	assign in_right_range = (4*LANE_WIDTH<=diff_x<5*LANE_WIDTH);
 
 	//up 001, left 010, down 011, right 100, shakeyShake 110
-	assign lane_type0 = in_bolt_range ? 3'b110 : 3'b000;
+	assign lane_type0 = in_shake_range ? 3'b110 : 3'b000;
 	assign lane_type1 = in_left_range ? 3'b010 : lane_type0;
 	assign lane_type2 = in_right_range ? 3'b100 : lane_type1;
 	assign lane_type3 = in_up_range ? 3'b001 : lane_type2;
@@ -144,6 +149,19 @@ module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock,
 		// pull index values from the various arrow value positions //TODO: check this fo sho
 		arrow_pixel_y = pixel_y - N*STATE_WIDTH;
 		arrow_pixel_x = diff_x/64;
+
+		// calculate address to pull
+		assign arrow_addr = arrow_pixel_x * arrow_pixel_y;
+
+		// pull these index values from the correct block <- need 1 clock cycle to pull 
+		parameter 
+		if(in_shake_range) begin
+			arrow_left_addr = arrow_addr;
+
+		end
+		if(in_left_range) begin
+			
+		end
 
 		// calculate position on 64 x 64 block that you should be pulling a pixel from for each state 
 
