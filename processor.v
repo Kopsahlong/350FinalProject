@@ -1,10 +1,17 @@
-module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dmem_address, dmem_out, player1);
+module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dmem_address, dmem_out, good_bad,
+	index0,  index1,  index2,  index3,  index4,  index5,  index6,  index7,  index8,  index9,
+	index10, index11, index12, index13, index14, index15, index16, index17, index18, index19,
+	index20, index21, index22, index23, index24, index25, index26, index27, index28, index29);
 
-	input player1;
 	input clock, reset, ps2_key_pressed;
 	input [7:0] ps2_out;
+
+	output [3:0] index0,  index1,  index2,  index3,  index4,  index5,  index6,  index7,  index8,  index9;
+	output [3:0] index10, index11, index12, index13, index14, index15, index16, index17, index18, index19;
+	output [3:0] index20, index21, index22, index23, index24, index25, index26, index27, index28, index29;
 	
 	output [9:0] score;
+	output [1:0] good_bad;
 	output [31:0] dmem_data_in, dmem_out;
 	output [11:0] dmem_address;
 
@@ -82,6 +89,38 @@ module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dm
 		assign flush = jr_isa_XS || branch_XS || bex_branch_XS;
 		assign stall = lw_isa_MS && (rd_MS_eq_rs_XS || rd_MS_eq_rt_XS || rd_XS_eq_rd_MS);
 
+		wire screenIndexReg1, screenIndexReg2, screenIndexReg3;
+		assign  index0 = screenIndexReg1[2:0];
+		assign  index1 = screenIndexReg1[5:3];
+		assign  index2 = screenIndexReg1[8:6];
+		assign  index3 = screenIndexReg1[11:9];
+		assign  index4 = screenIndexReg1[14:12];
+		assign  index5 = screenIndexReg1[17:15];
+		assign  index6 = screenIndexReg1[20:18];
+		assign  index7 = screenIndexReg1[23:21];
+		assign  index8 = screenIndexReg1[26:24];
+		assign  index9 = screenIndexReg1[29:27];
+		assign index10 = screenIndexReg2[2:0];
+		assign index11 = screenIndexReg2[5:3];
+		assign index12 = screenIndexReg2[8:6];
+		assign index13 = screenIndexReg2[11:9];
+		assign index14 = screenIndexReg2[14:12];
+		assign index15 = screenIndexReg2[17:15];
+		assign index16 = screenIndexReg2[20:18];
+		assign index17 = screenIndexReg2[23:21];
+		assign index18 = screenIndexReg2[26:24];
+		assign index19 = screenIndexReg2[29:27];
+		assign index20 = screenIndexReg3[2:0];
+		assign index21 = screenIndexReg3[5:3];
+		assign index22 = screenIndexReg3[8:6];
+		assign index23 = screenIndexReg3[11:9];
+		assign index24 = screenIndexReg3[14:12];
+		assign index25 = screenIndexReg3[17:15];
+		assign index26 = screenIndexReg3[20:18];
+		assign index27 = screenIndexReg3[23:21];
+		assign index28 = screenIndexReg3[26:24];
+		assign index29 = screenIndexReg3[29:27];
+
 	// - - - (F)ETCH (S)TAGE - - - //
 		instruction_decoder instruction_decoder_FS(.instruction(instruction_FS), .opcode(opcode_FS), .rd(rd_FS), .rs(rs_FS), .rt(rt_FS), .shamt(shamt_FS), .ALU_op(ALU_op_FS), .immediate(immediate_FS), .target(target_FS), .add_isa(add_isa_FS), .addi_isa(addi_isa_FS), .sub_isa(sub_isa_FS), .and_isa(and_isa_FS), .or_isa(or_isa_FS), .sll_isa(sll_isa_FS), .sra_isa(sra_isa_FS), .mul_isa(mul_isa_FS), .div_isa(div_isa_FS), .sw_isa(sw_isa_FS), .lw_isa(lw_isa_FS), .j_isa(j_isa_FS), .bne_isa(bne_isa_FS), .jal_isa(jal_isa_FS), .jr_isa(jr_isa_FS), .blt_isa(blt_isa_FS), .bex_isa(bex_isa_FS), .setx_isa(setx_isa_FS));
 
@@ -119,7 +158,7 @@ module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dm
 		instruction_decoder instruction_decoder_DS(.instruction(instruction_DS), .opcode(opcode_DS), .rd(rd_DS), .rs(rs_DS), .rt(rt_DS), .shamt(shamt_DS), .ALU_op(ALU_op_DS), .immediate(immediate_DS), .target(target_DS), .add_isa(add_isa_DS), .addi_isa(addi_isa_DS), .sub_isa(sub_isa_DS), .and_isa(and_isa_DS), .or_isa(or_isa_DS), .sll_isa(sll_isa_DS), .sra_isa(sra_isa_DS), .mul_isa(mul_isa_DS), .div_isa(div_isa_DS), .sw_isa(sw_isa_DS), .lw_isa(lw_isa_DS), .j_isa(j_isa_DS), .bne_isa(bne_isa_DS), .jal_isa(jal_isa_DS), .jr_isa(jr_isa_DS), .blt_isa(blt_isa_DS), .bex_isa(bex_isa_DS), .setx_isa(setx_isa_DS));
 
 		// - - - REGFILE - - - //
-		regfile_32b my_regfile(.clock(~clock), .ctrl_writeEnable(regfile_WE), .ctrl_reset(reset), .ctrl_writeReg(regfile_RD), .ctrl_readRegA(regfile_S1), .ctrl_readRegB(regfile_S2), .read_score_reg(score), .data_writeReg(regfile_DW_WS), .data_readRegA(regfile_RS1VAL_DS), .data_readRegB(regfile_RS2VAL_DS), .exception_flag(exception_flag_WS), .exception_flag_hot(exception_flag_hot_WS), .ps2_key_pressed(ps2_key_pressed), .ps2_out(ps2_out));
+		regfile_32b my_regfile(.clock(~clock), .ctrl_writeEnable(regfile_WE), .ctrl_reset(reset), .ctrl_writeReg(regfile_RD), .ctrl_readRegA(regfile_S1), .ctrl_readRegB(regfile_S2), .read_score_reg(score), .data_writeReg(regfile_DW_WS), .data_readRegA(regfile_RS1VAL_DS), .data_readRegB(regfile_RS2VAL_DS), .exception_flag(exception_flag_WS), .exception_flag_hot(exception_flag_hot_WS), .ps2_key_pressed(ps2_key_pressed), .ps2_out(ps2_out), .screenIndexReg1(screenIndexReg1), .screenIndexReg2(screenIndexReg2), .screenIndexReg3(screenIndexReg3), .goodBad_reg(good_bad));
 		
 		// regfile S1, S2
 		assign regfile_S1 = rs_DS; //S1 will always be rs
@@ -231,7 +270,7 @@ module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dm
 		dmem mydmem(	.address	(dmem_address),
 						.clock		(~clock),
 						.data		(dmem_data_in),
-						.wren		(sw_isa_MS && player1), // NOTE: Only player1 may write to memory!
+						.wren		(sw_isa_MS),
 						.q			(dmem_out)
 		);
 
@@ -376,12 +415,13 @@ endmodule
 
 // - - - REGFILE - - - //
 
-module regfile_32b(clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg, ctrl_readRegA, ctrl_readRegB, read_score_reg, data_writeReg, data_readRegA, data_readRegB, exception_flag, exception_flag_hot, ps2_key_pressed, ps2_out);
+module regfile_32b(clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg, ctrl_readRegA, ctrl_readRegB, read_score_reg, data_writeReg, data_readRegA, data_readRegB, exception_flag, exception_flag_hot, ps2_key_pressed, ps2_out, screenIndexReg1, screenIndexReg2, screenIndexReg3, goodBad_reg);
 	input clock, ctrl_writeEnable, ctrl_reset, exception_flag_hot, ps2_key_pressed;
 	input [7:0] ps2_out;
 	input [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
 	input [31:0] data_writeReg, exception_flag;
-	output [31:0] data_readRegA, data_readRegB;
+	output [31:0] data_readRegA, data_readRegB, screenIndexReg1, screenIndexReg2, screenIndexReg3;
+	output [1:0] goodBad_reg;
 	output [9:0] read_score_reg;
 
 	wire [31:0] decoded_writeReg, decoded_readRegA, decoded_readRegB;
@@ -424,37 +464,40 @@ module regfile_32b(clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg, ctrl_read
 		assign data_readRegB = decoded_readRegB[4] ? data_readReg_32b_4 : 32'bz;
 
 
-		// SCORE REGISTER
+		// score REGISTER
 		wire [31:0] data_readReg_32b_5;
 		register_32b register_5(.clock(clock), .ctrl_writeEnable(decoded_writeReg[5]), .ctrl_reset(ctrl_reset), .data_writeReg_32b(data_writeReg), .data_readReg_32b(data_readReg_32b_5));
 		assign data_readRegA = decoded_readRegA[5] ? data_readReg_32b_5 : 32'bz;
 		assign data_readRegB = decoded_readRegB[5] ? data_readReg_32b_5 : 32'bz;
 		assign read_score_reg = data_readReg_32b_5[9:0]; // always outputs current score
 
-
+		// screenIndexReg1 REGISTER
 		wire [31:0] data_readReg_32b_6;
 		register_32b register_6(.clock(clock), .ctrl_writeEnable(decoded_writeReg[6]), .ctrl_reset(ctrl_reset), .data_writeReg_32b(data_writeReg), .data_readReg_32b(data_readReg_32b_6));
 		assign data_readRegA = decoded_readRegA[6] ? data_readReg_32b_6 : 32'bz;
 		assign data_readRegB = decoded_readRegB[6] ? data_readReg_32b_6 : 32'bz;
+		assign screenIndexReg1 = data_readReg_32b_6;
 
-
+		// screenIndexReg2 REGISTER
 		wire [31:0] data_readReg_32b_7;
 		register_32b register_7(.clock(clock), .ctrl_writeEnable(decoded_writeReg[7]), .ctrl_reset(ctrl_reset), .data_writeReg_32b(data_writeReg), .data_readReg_32b(data_readReg_32b_7));
 		assign data_readRegA = decoded_readRegA[7] ? data_readReg_32b_7 : 32'bz;
 		assign data_readRegB = decoded_readRegB[7] ? data_readReg_32b_7 : 32'bz;
+		assign screenIndexReg2 = data_readReg_32b_7;
 
-
+		// screenIndexReg3 REGISTER
 		wire [31:0] data_readReg_32b_8;
 		register_32b register_8(.clock(clock), .ctrl_writeEnable(decoded_writeReg[8]), .ctrl_reset(ctrl_reset), .data_writeReg_32b(data_writeReg), .data_readReg_32b(data_readReg_32b_8));
 		assign data_readRegA = decoded_readRegA[8] ? data_readReg_32b_8 : 32'bz;
 		assign data_readRegB = decoded_readRegB[8] ? data_readReg_32b_8 : 32'bz;
+		assign screenIndexReg3 = data_readReg_32b_8;
 
-
+		// goodBad REGISTER
 		wire [31:0] data_readReg_32b_9;
 		register_32b register_9(.clock(clock), .ctrl_writeEnable(decoded_writeReg[9]), .ctrl_reset(ctrl_reset), .data_writeReg_32b(data_writeReg), .data_readReg_32b(data_readReg_32b_9));
 		assign data_readRegA = decoded_readRegA[9] ? data_readReg_32b_9 : 32'bz;
 		assign data_readRegB = decoded_readRegB[9] ? data_readReg_32b_9 : 32'bz;
-
+		assign goodBad_reg = data_readReg_32b_9[1:0];
 
 		wire [31:0] data_readReg_32b_10;
 		register_32b register_10(.clock(clock), .ctrl_writeEnable(decoded_writeReg[10]), .ctrl_reset(ctrl_reset), .data_writeReg_32b(data_writeReg), .data_readReg_32b(data_readReg_32b_10));
