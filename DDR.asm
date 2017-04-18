@@ -40,12 +40,15 @@ bne $22, $2, decrementScore2  // if lastKeyInput != arrowInfo from goodIndex2 --
 j incrementScore1 // else score += 1
 incrementScore2:
 addi $5, $5, 2
+addi $9, $0, 1 // store 01 in goodBad register $9
 j keyPressedStateWait
 incrementScore1:
 addi $5, $5, 1
+addi $9, $0, 2 // store 10 in goodBad register $9
 j keyPressedStateWait
 decrementScore2:
 addi $5, $5, -2
+addi $9, $0, 3 // store 11 in goodBad register $9
 j keyPressedStateWait
 keyPressedStateWait:
 addi $1, $1, 1 // increment clockCycle by 1, count to numClockCyclesUntilStateChange
@@ -61,6 +64,8 @@ j keyPressedStateWait
 stateChange:
 addi $1, $0, 0 // reset clockCycle to 0
 addi $2, $0, noKeyInput // reset lastKeyInput to noKeyInput
+addi $9, $0, 0 // reset goodBad register to 00
+shiftIndexes:
 sll $8, $8, 3 // shift register $8 left 3
 addi $10, $0, 7 // store 00000000000000000000000000000111 in temp $10 as mask
 sra $11, $7, 27 // shift in19 to lower 3 bits of $11
