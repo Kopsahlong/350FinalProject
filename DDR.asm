@@ -191,7 +191,7 @@ noop
 noop
 sub $14, $13, $11 // subtract out multiplied value to take the real mod --> store in randomNumber
 sra $4, $14, 1
-addi $10, $0, 5 // make check value 
+addi $10, $0, 6 // make check value 
 addi $11, $0, 7
 and $12, $4, $11
 blt $10, $12, generateRandomNumber // if the value is not within scope, get another one.

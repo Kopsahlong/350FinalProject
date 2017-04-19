@@ -51,7 +51,7 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 	assign excellent_index = 8'h001; // green
 	assign good_index = 8'h002; // yellow
 	assign bad_index = 8'h003; // red
-	assign left_index = 8'h004; // 083156
+	assign left_index = 8'h004; // 068315
 	assign right_index = 8'h005; // 0067a9
 	assign up_index = 8'h006; //666dab
 	assign down_index = 8'h007; //674ea7
