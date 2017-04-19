@@ -1,119 +1,212 @@
-module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock, index){
+module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock, index);
 	input [18:0] address;
-	input [19:0][2:0] arrow_array; 
+	input [77:0] arrow_array; // 3*26 = 78 indices
 	input [1:0] p1_indicator, p2_indicator;
 	input clock;
 	output [7:0] index;
+	
+	wire [18:0] arrow_left_addr, arrow_up_addr, arrow_down_addr, arrow_right_addr, shakeyshake_addr;
+	wire [2:0] arrow_matrix [25:0];
+	
+	// -- convert address to integer for future use -- //
+	/*for (i = 0; i < 26; i = i + 1) begin
+		arrow_matrix[i] = 3'b000;
+	end*/
+	
+	// transform array to matrix 
+	assign arrow_matrix[0] = arrow_array[2:0];
+	assign arrow_matrix[1] = arrow_array[5:3];
+	assign arrow_matrix[2] = arrow_array[8:6];
+	assign arrow_matrix[3] = arrow_array[11:9];
+	assign arrow_matrix[4] = arrow_array[14:12];
+	assign arrow_matrix[5] = arrow_array[17:15];
+	assign arrow_matrix[6] = arrow_array[20:18];
+	assign arrow_matrix[7] = arrow_array[23:21];
+	assign arrow_matrix[8] = arrow_array[26:24];
+	assign arrow_matrix[9] = arrow_array[29:27];
+	assign arrow_matrix[10] = arrow_array[32:30];
+	assign arrow_matrix[11] = arrow_array[35:33];
+	assign arrow_matrix[12] = arrow_array[38:36];
+	assign arrow_matrix[13] = arrow_array[41:39];
+	assign arrow_matrix[14] = arrow_array[44:42];
+	assign arrow_matrix[15] = arrow_array[47:45];
+	assign arrow_matrix[16] = arrow_array[50:48];
+	assign arrow_matrix[17] = arrow_array[53:51];
+	assign arrow_matrix[18] = arrow_array[56:54];
+	assign arrow_matrix[19] = arrow_array[59:57];
+	assign arrow_matrix[20] = arrow_array[62:60];
+	assign arrow_matrix[21] = arrow_array[65:63];
+	assign arrow_matrix[22] = arrow_array[68:66];
+	assign arrow_matrix[23] = arrow_array[71:69];
+	assign arrow_matrix[24] = arrow_array[74:72];
+	assign arrow_matrix[25] = arrow_array[77:75];
 
-	wire [18:0] arrow_left_addr, arrow_up_addr, arrow_down_addr, arrow_right_addr;
-	wire [7:0] arrow_left_index, arrow_up_index, arrow_down_index, arrow_right_index;
+	
+	//integer address; // Q: unsure as to what this actually does, but seems to work?
+	//always @(ADDR)
+	//	address = ADDR;
 
-
-	// data blocks needed to load images
-	arrow_left_data my_arrow_left_data(
-		.address(arrow_left_addr), //Q: what should the address size be in this case?
-		.clock(clock), //Q: check if this should be ~clock
-		.q(arrow_left_index))
-
-	arrow_up_data my_arrow_up_data(
-		.address(arrow_up_addr),
-		.clock(clock),
-		.q(arrow_up_index))
-
-	arrow_down_data my_arrow_down_data(
-		.address(arrow_down_addr),
-		.clock(clock),
-		.q(arrow_down_index))
-
-	arrow_right_data my_arrow_right_data(
-		.address(arrow_right_addr),
-		.clock(clock),
-		.q(arrow_right_index))
-
-	// TODO: add in lightning bolt 
-
-	// data memory to pull from game logic 
+	// colors for use TODO: input proper colors to these indices
+	wire [7:0] excellent_index, good_index, bad_index, left_index, right_index, up_index, down_index, shakeyshake_index, default_index;
+	assign excellent_index = 8'h001; // green
+	assign good_index = 8'h002; // yellow
+	assign bad_index = 8'h003; // red
+	assign left_index = 8'h004; // 083156
+	assign right_index = 8'h005; // 0067a9
+	assign up_index = 8'h006; //666dab
+	assign down_index = 8'h007; //674ea7
+	assign shakeyshake_index = 8'h008; //abcdef
+	assign default_index = 8'h000; //f0e7df
 
 	// hard coded constants that can be changed
-	parameter SCREEN_WIDTH = 640;
-	parameter SCREEN_HEIGHT = 480;
-	parameter PLAY_HEIGHT = 427;
-	parameter PLAYER_BORDER = SCREEN_WIDTH/2;
-	parameter LANE_WIDTH = SCREEN_WIDTH/10;
-	parameter LANE_HEIGHT = LANE_WIDTH;
-	parameter INDICATOR_PANEL_HEIGHT = SCREEN_HEIGHT-PLAY_HEIGHT; //53
-	parameter INDICATOR_PANEL_WIDTH =  SCREEN_WIDTH/2; // 320
+	wire [18:0] SCREEN_WIDTH, SCREEN_HEIGHT, PLAY_HEIGHT, PLAYER_BORDER, LANE_WIDTH, LANE_HEIGHT, STATE_HEIGHT, INDICATOR_PANEL_HEIGHT;
+	assign SCREEN_WIDTH = 19'd640;
+	assign SCREEN_HEIGHT = 19'd480;
+	//assign PLAY_HEIGHT = 19'd432;
+	assign PLAYER_BORDER = 19'd320; //SCREEN_WIDTH/2
+	assign LANE_WIDTH = 19'd64; //SCREEN_WIDTH/10
+	assign LANE_HEIGHT = 19'd64; //LANE_WIDTH
+	assign STATE_HEIGHT = 19'd16; //LANE_WIDTH/4
+	assign INDICATOR_PANEL_HEIGHT = 19'd48; //SCREEN_HEIGHT-PLAY_HEIGHT;
 
-	// check which grid area the address falls into 
-	parameter pixel_width = address/SCREEN_WIDTH; // some function of the address
-	parameter pixel_height = SCREEN_WIDTH - address%SCREEN_WIDTH; // some function of the address
+	// check which pixel location the address falls into //TODO: test this!!
+	wire [18:0] pixel_x, pixel_y;
+	calculate_pixel_location my_pixel_location(pixel_x, pixel_y, address, SCREEN_HEIGHT, SCREEN_WIDTH);
 
-	// PLAYER 1 ARROW ADDRESS
-	// range HEIGHT = [0 -> SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT] and WIDTH = [0 -> PLAYER_BORDER]
-	assign in_arrow_range = (pixel_height < (SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT));
-	assign in_indicator_range = (pixel_height > (SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT));
-	assign in_p1_range = (pixel_width < PLAYER_BORDER);
-	assign in_p2_range = (pixel_width > PLAYER_BORDER);
-	assign in_p1_arrow_range = (in_arrow_range) & (in_p1_range));
+	// assign address to a range 
+	wire in_arrow_range, in_indicator_range, in_arrow_block_range, in_p1_range, in_p2_range, in_p1_arrow_range, in_p2_arrow_range, in_p1_indicator_range, in_p2_indicator_range;
+	assign in_arrow_range = pixel_y < (SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT);
+	assign in_arrow_block_range = ((SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT - LANE_HEIGHT) < pixel_y) & ( pixel_y < (SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT));
+	assign in_indicator_range = (pixel_y > (SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT));
+	assign in_p1_range = (pixel_x < PLAYER_BORDER);
+	assign in_p2_range = (pixel_x > PLAYER_BORDER);
+	assign in_p1_arrow_range = (in_arrow_range) & (in_p1_range);
 	assign in_p2_arrow_range = (in_arrow_range) & (in_p2_range);
 	assign in_p1_indicator_range = (in_indicator_range) & (in_p1_range); 
 	assign in_p2_indicator_range = (in_indicator_range) & (in_p2_range); 
 
-	// TODO: extract out to a module
-	if(in_p1_indicator_range) begin
-		// congifgure hex values for each category
-		assign index_excellent = 6'H39FF14; // green
-		assign index_good = 6'HFF7435; // orange
-		assign index_bad = 6'HD82735; // red
-		assign index_default = 6'H06A9FC; // blue
+	// distance of pixel from player edge
+	wire [18:0] diff_x, diff_x_p1, diff_x_p2;
+	assign diff_x_p1 = pixel_x;
+	assign diff_x_p2 = pixel_x - PLAYER_BORDER;
+	assign diff_x = in_p1_range ? diff_x_p1 : diff_x_p2;
+	
+	// assign lane type that address falls into
+	wire in_shake_range, in_left_range, in_up_range, in_down_range, in_right_range;
+	assign in_shake_range = (diff_x<64);
+	assign in_left_range = (64<=diff_x)&(diff_x<128);
+	assign in_up_range = (128<=diff_x)&(diff_x<192);
+	assign in_down_range = (192<=diff_x)&(diff_x<256);
+	assign in_right_range = (256<=diff_x)&(diff_x<320);
 
-		// check whether each category is true
-		assign is_excellent = p1_indicator == 2'b11;
-		assign is_good = p1_indicator == 2'b10;
-		assign is_bad = p1_indicator == 2'b01;
+	//up 001, left 010, down 011, right 100, shakeyShake 110
+	wire [2:0] lane_type0,lane_type1,lane_type2,lane_type3,lane_type;
+	assign lane_type0 = in_shake_range ? 3'b110 : 3'b000;
+	assign lane_type1 = in_left_range ? 3'b010 : lane_type0;
+	assign lane_type2 = in_right_range ? 3'b100 : lane_type1;
+	assign lane_type3 = in_up_range ? 3'b001 : lane_type2;
+	assign lane_type = in_down_range ? 3'b011 : lane_type3;
 
-		// assign index 
-		assign index0 = is_excellent ? index_excellent : index_default;
-		assign index1 = is_good ? index_good : index0;
-		assign index = is_bad ? index_bad : index1;
-	end
+	// -- choose index in p1 indicator range -- //
+	
+	wire [7:0] p1_indicator_index;
+	select_indicator_index p1_indicator_selector(p1_indicator, p1_indicator_index, excellent_index, good_index, bad_index, default_index);
 
-	if(in_p1_indicator_range) begin
-		// congifgure hex values for each category
-		assign index_excellent = 6'H39FF14; // green
-		assign index_good = 6'HFF7435; // orange
-		assign index_bad = 6'HD82735; // red
-		assign index_default = 6'H06A9FC; // blue
+	// -- choose index in p2 indicator range -- //
+	
+	wire [7:0] p2_indicator_index;
+	select_indicator_index p2_indicator_selector(p2_indicator, p2_indicator_index, excellent_index, good_index, bad_index, default_index);
+	
+	// -- choose index in arrow range -- //
+	
+	wire [7:0] arrow_range_index;
 
-		// check whether each category is true
-		assign is_excellent = p1_indicator == 2'b11;
-		assign is_good = p1_indicator == 2'b10;
-		assign is_bad = p1_indicator == 2'b01;
+	// figure out which state slot you're in
+	wire [18:0] N;
+	assign N = pixel_y/STATE_HEIGHT;
+	
+	// TODO: ********* redo indexing based on the new flattened matrix *********
+	// figure out which indices to pull arrow values from
+	wire [18:0] arrow_3_N_index, arrow_2_N_index, arrow_1_N_index, arrow_0_N_index;
+	assign arrow_0_N_index = N;
+	assign arrow_1_N_index = N-18'd1;
+	assign arrow_2_N_index = N-18'd2;
+	assign arrow_3_N_index = N-18'd3;
 
-		// assign index 
-		assign index0 = is_excellent ? index_excellent : index_default;
-		assign index1 = is_good ? index_good : index0;
-		assign index = is_bad ? index_bad : index1;
-	end
+	// check to see if the index is valid
+	wire arrow_index_0_valid, arrow_index_1_valid, arrow_index_2_valid, arrow_index_3_valid;
+	assign arrow_index_0_valid = (arrow_0_N_index < 18'd77) & (arrow_0_N_index >= 18'd0);
+	assign arrow_index_1_valid = (arrow_1_N_index < 18'd77) & (arrow_1_N_index >= 18'd0);
+	assign arrow_index_2_valid = (arrow_2_N_index < 18'd77) & (arrow_2_N_index >= 18'd0);
+	assign arrow_index_3_valid = (arrow_3_N_index < 18'd77) & (arrow_3_N_index >= 18'd0);
 
+	// if the state index is valid, use that. otherwise, use 0 to not cause an error in indexing matrix
+	wire [18:0] arrow_0_index, arrow_1_index, arrow_2_index, arrow_3_index;
+	assign arrow_0_index = arrow_index_0_valid ? arrow_0_N_index : 18'd0;
+	assign arrow_1_index = arrow_index_1_valid ? arrow_1_N_index : 18'd0;
+	assign arrow_2_index = arrow_index_2_valid ? arrow_2_N_index : 18'd0;
+	assign arrow_3_index = arrow_index_3_valid ? arrow_3_N_index : 18'd0;
 
-	// based on pixel height, identify corresponding N state
+	// finally, retrieve your arrow values
+	wire [2:0] arrow_0_value, arrow_1_value, arrow_2_value, arrow_3_value;
+	assign arrow_0_value = arrow_matrix[arrow_0_index];
+	assign arrow_1_value = arrow_matrix[arrow_1_index];
+	assign arrow_2_value = arrow_matrix[arrow_2_index];
+	assign arrow_3_value = arrow_matrix[arrow_3_index];
 
-	// based on pixel width, indicate what type it should be (shake, left, right, up, down)
+	// if any of these values matches your index and is valid
+	wire arrow_present;
+	assign arrow_present = (((arrow_0_value==lane_type)&(arrow_index_0_valid)) | ((arrow_1_value==lane_type)&(arrow_index_1_valid)) | ((arrow_2_value==lane_type)&(arrow_index_2_valid)) | ((arrow_3_value==lane_type)&(arrow_index_3_valid)));
+	
+	// if the arrow is present, calculate color based on index, otherwise use default color
+	wire [7:0] arrow_range_index0, arrow_range_index1, arrow_range_index2, arrow_range_index3;
+	assign arrow_range_index0 = (arrow_present & in_shake_range) ? shakeyshake_index : default_index;
+	assign arrow_range_index1 = (arrow_present & in_left_range) ? left_index : arrow_range_index0;
+	assign arrow_range_index2 = (arrow_present & in_up_range) ? up_index : arrow_range_index1;
+	assign arrow_range_index3 = (arrow_present & in_down_range) ? down_index : arrow_range_index2;
+	assign arrow_range_index = (arrow_present & in_right_range) ? right_index : arrow_range_index3;
 
-	// if that chosen type corresponds with what is in the array for that Nth state, calculate the address 
+	// -- calculate the static block index if you're in the top 4 states -- //
+	wire [7:0] arrow_block_index, arrow_block_index0, arrow_block_index1, arrow_block_index2, arrow_block_index3;
+	assign arrow_block_index0 = (in_shake_range) ? shakeyshake_index : default_index;
+	assign arrow_block_index1 = (in_left_range) ? left_index : arrow_block_index0;
+	assign arrow_block_index2 = (in_up_range) ? up_index : arrow_block_index1;
+	assign arrow_block_index3 = (in_down_range) ? down_index : arrow_block_index2;
+	assign arrow_block_index = (in_right_range) ? right_index : arrow_block_index3;	
 
-	// based on 
-	// PLAYER 2 ARROW ADDRESS
-	// range HEIGHT = [0 -> SCREEN_HEIGHT - INDICATOR_PANEL_HEIGHT] and WIDTH = [PLAYER_BORDER -> SCREEN_WIDTH]
+	// -- now choose which of the selected indexes to use -- //
+	wire [7:0] index0, index1, index2;
+	assign index0 = in_p1_indicator_range ? p1_indicator_index : default_index;
+	assign index1 = in_p2_indicator_range ? p2_indicator_index : index0;
+	assign index2 = in_arrow_range ? arrow_range_index : index1;
+	assign index = in_arrow_block_range ? arrow_block_index : index2;
 
-	// PLAYER 1 INDICATOR PANEL
-	// range HEIGHT = [SCREEN_HEIGHT-INDICATOR_HEIGHT -> SCREEN_HEIGHT] and WIDTH = [0 -> PLAYER_BORDER]
+endmodule
 
-	// PLAYER 2 INDICATOR PANEL
-	// range HEIGHT = [SCREEN_HEIGHT-INDICATOR_HEIGHT -> SCREEN_HEIGHT] and WIDTH = [PLAYER_BORDER -> SCREEN_WIDTH]
+module select_indicator_index(indicator, indicator_index, excellent_index, good_index, bad_index, default_index);
+	input [1:0] indicator;
+	input [7:0] excellent_index, good_index, bad_index, default_index;
+	output [7:0] indicator_index;
 
+	// check whether each category is true
+	wire is_excellent, is_good, is_bad;
+	assign is_excellent = indicator == 2'b11;
+	assign is_good = indicator == 2'b10;
+	assign is_bad = indicator == 2'b01;
 
-	// If pixel chosen is a 'clear' color, set it it to default background color
+	// assign index 
+	wire [7:0] index0, index1, index2;
+	assign index0 = is_excellent ? excellent_index : default_index;
+	assign index1 = is_good ? good_index : index0;
+	assign indicator_index = is_bad ? bad_index : index1;
 
-}
+endmodule
+
+module calculate_pixel_location(pixel_x, pixel_y, address, SCREEN_HEIGHT, SCREEN_WIDTH);
+	input [18:0] SCREEN_HEIGHT, SCREEN_WIDTH, address;
+	output [18:0] pixel_x, pixel_y;
+
+	assign pixel_y = address/SCREEN_WIDTH; // some function of the address
+	assign pixel_x = address-pixel_y*SCREEN_WIDTH; // some function of the address //TODO:see if you can do this all on one line or not 
+	
+endmodule
