@@ -556,62 +556,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "seg2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg4[6]",
-					"strict" : false
-				},
-				{
 					"name" : "seg5[0]",
 					"strict" : false
 				},
@@ -637,62 +581,6 @@
 				},
 				{
 					"name" : "seg5[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg7[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg7[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg7[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg7[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg7[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg7[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg8[6]",
 					"strict" : false
 				},
 				{

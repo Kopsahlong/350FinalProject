@@ -13,7 +13,7 @@ module skeleton(resetn,
 	VGA_G,	 														//	VGA Green[9:0]
 	VGA_B,															//	VGA Blue[9:0]
 	CLOCK_50,
-	color_select, shakeyShake1In, shakeyShake2In, shakeyShake1Out, shakeyShake2Out);  													// 50 MHz clock
+	color_select, shakeyShake1In, shakeyShake2In);  													// 50 MHz clock
 		
 	////////////////////////	VGA	////////////////////////////
 	output			VGA_CLK;   				//	VGA Clock
@@ -27,10 +27,6 @@ module skeleton(resetn,
 	input			CLOCK_50;
 	input	[7:0]   color_select;
 	input shakeyShake1In, shakeyShake2In;
-	output shakeyShake1Out, shakeyShake2Out;
-	
-	//assign shakeyShake1Out = shakeyShake1In;
-	//assign shakeyShake2Out = shakeyShake2In;
 
 	////////////////////////	PS2	////////////////////////////
 	input 			resetn;
@@ -128,20 +124,20 @@ module skeleton(resetn,
 	//TODO: write "Player 1 winning!" or "Player 2 winning!" "Score is tied!" to lcd based on scores 
 	
 	// SEVEN SEGMENT DISPLAYS
-	binary_to_seven_segment_converter(player1_score, seg5, seg6, seg7, seg8);
-	binary_to_seven_segment_converter(player2_score, seg1, seg2, seg3, seg4);
-	//wire [9:0] debug_sevseg1, debug_sevseg2;
-	//assign debug_sevseg1[2:0] = player1_index0;
-	//assign debug_sevseg1[9:3] = 7'b0;
-	//assign debug_sevseg2[2:0] = player1_index24;
-	//assign debug_sevseg2[9:3] = 7'b0;
-	//binary_to_seven_segment_converter(debug_sevseg1, seg5, seg6, seg7, seg8);
-	//binary_to_seven_segment_converter(debug_sevseg2, seg1, seg2, seg3, seg4);
+	//binary_to_seven_segment_converter(player1_score, seg5, seg6, seg7, seg8);
+	//binary_to_seven_segment_converter(player2_score, seg1, seg2, seg3, seg4);
+	wire [9:0] debug_sevseg1, debug_sevseg2;
+	assign debug_sevseg1[2:0] = player1_indexes[2:0];
+	assign debug_sevseg1[9:3] = 7'b0;
+	assign debug_sevseg2[2:0] = player1_indexes[2:0];
+	assign debug_sevseg2[9:3] = 7'b0;
+	binary_to_seven_segment_converter(debug_sevseg1, seg5, seg6, seg7, seg8);
+	binary_to_seven_segment_converter(debug_sevseg2, seg1, seg2, seg3, seg4);
 
 	
 	// some LEDs that you could use for debugging if you wanted
 	assign leds[7:1] = 7'b0;
-	assign leds[0] = ~shakeyShake1In;
+	assign leds[0] = shakeyShake1In;
 		
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);
