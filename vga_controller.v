@@ -6,12 +6,18 @@ module vga_controller(iRST_n,
                       b_data,
                       g_data,
                       r_data,
-							 select);
+							        select,
+                      player1_good_bad,
+                      player2_good_bad,
+                      player1_indexes,
+                      player2_indexes);
 
 	
 input iRST_n;
 input iVGA_CLK;
 input [7:0] select;
+input [1:0] player1_good_bad, player2_good_bad;
+input [77:0] player1_indexes, player2_indexes;
 output reg oBLANK_n;
 output reg oHS;
 output reg oVS;
@@ -51,10 +57,7 @@ wire [1:0] p1_indicator, p2_indicator;
 
 //assign address = 19'd300800;
 
-assign arrow_array = 78'b000000000000000000000000001100000000000000000000000000000100000000000000000110;
-assign p1_indicator = 2'b11;
-assign p2_indicator = 2'b01;
-index_identifier my_index_identifier(ADDR, arrow_array, p1_indicator, p2_indicator, clock, index);
+index_identifier my_index_identifier(.address(ADDR), .arrow_array(player1_indexes), .p1_indicator(player1_good_bad), .p2_indicator(player2_good_bad), .clock(clock), .index(index));
 
 //assign index = 8'b01;
 

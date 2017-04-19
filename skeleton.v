@@ -60,22 +60,11 @@ module skeleton(resetn,
 	wire game_reset;
 	assign game_reset = (~resetn || (ps2_out == 8'h2d)) ? 1'b1 : 1'b0;
 
-	wire [2:0] player1_index0,  player1_index1,  player1_index2,  player1_index3,  player1_index4,  player1_index5,  player1_index6,  player1_index7,  player1_index8,  player1_index9;
-	wire [2:0] player1_index10, player1_index11, player1_index12, player1_index13, player1_index14, player1_index15, player1_index16, player1_index17, player1_index18, player1_index19;
-	wire [2:0] player1_index20, player1_index21, player1_index22, player1_index23, player1_index24, player1_index25, player1_index26, player1_index27, player1_index28, player1_index29;
-	wire [2:0] player2_index0,  player2_index1,  player2_index2,  player2_index3,  player2_index4,  player2_index5,  player2_index6,  player2_index7,  player2_index8,  player2_index9;
-	wire [2:0] player2_index10, player2_index11, player2_index12, player2_index13, player2_index14, player2_index15, player2_index16, player2_index17, player2_index18, player2_index19;
-	wire [2:0] player2_index20, player2_index21, player2_index22, player2_index23, player2_index24, player2_index25, player2_index26, player2_index27, player2_index28, player2_index29;
+	wire [77:0] player1_indexes,  player2_indexes;
 	wire [1:0] player1_good_bad, player2_good_bad;
 
-	processor player1_processor(clock, game_reset, player1_key_pressed, player1_arrow_input, player1_score, dmem_data_in_player1, dmem_address_player1, dmem_data_out_player1, player1_good_bad,
-								player1_index0,  player1_index1,  player1_index2,  player1_index3,  player1_index4,  player1_index5,  player1_index6,  player1_index7,  player1_index8,  player1_index9,
-								player1_index10, player1_index11, player1_index12, player1_index13, player1_index14, player1_index15, player1_index16, player1_index17, player1_index18, player1_index19,
-								player1_index20, player1_index21, player1_index22, player1_index23, player1_index24, player1_index25, player1_index26, player1_index27, player1_index28, player1_index29);
-	processor player2_processor(clock, game_reset, player2_key_pressed, player2_arrow_input, player2_score, dmem_data_in_player2, dmem_address_player2, dmem_data_out_data_player2, player2_good_bad,
-								player2_index0,  player2_index1,  player2_index2,  player2_index3,  player2_index4,  player2_index5,  player2_index6,  player2_index7,  player2_index8,  player2_index9,
-								player2_index10, player2_index11, player2_index12, player2_index13, player2_index14, player2_index15, player2_index16, player2_index17, player2_index18, player2_index19,
-								player2_index20, player2_index21, player2_index22, player2_index23, player2_index24, player2_index25, player2_index26, player2_index27, player2_index28, player2_index29);
+	processor player1_processor(clock, game_reset, player1_key_pressed, player1_arrow_input, player1_score, dmem_data_in_player1, dmem_address_player1, dmem_data_out_player1, player1_good_bad, player1_indexes);
+	processor player2_processor(clock, game_reset, player2_key_pressed, player2_arrow_input, player2_score, dmem_data_in_player2, dmem_address_player2, dmem_data_out_data_player2, player2_good_bad, player2_indexes);
 
 	
 	// keyboard controller
@@ -159,7 +148,11 @@ module skeleton(resetn,
 								 .b_data(VGA_B),
 								 .g_data(VGA_G),
 								 .r_data(VGA_R),
-								 .select(color_select));
+								 .select(color_select),
+								 .player1_good_bad(player1_good_bad),
+								 .player2_good_bad(player2_good_bad).
+								 .player1_indexes(player1_indexes),
+								 .player2_indexes(player2_indexes));
 	
 	
 endmodule

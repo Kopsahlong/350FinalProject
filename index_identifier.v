@@ -1,6 +1,6 @@
-module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock, index);
+module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p2_indicator, clock, index);
 	input [18:0] address;
-	input [77:0] arrow_array; // 3*26 = 78 indices
+	input [77:0] p1_arrow_array, p1_arrow_array; // 3*26 = 78 indices
 	input [1:0] p1_indicator, p2_indicator;
 	input clock;
 	output [7:0] index;
@@ -14,32 +14,32 @@ module index_identifier(address, arrow_array, p1_indicator, p2_indicator, clock,
 	end*/
 	
 	// transform array to matrix 
-	assign arrow_matrix[0] = arrow_array[2:0];
-	assign arrow_matrix[1] = arrow_array[5:3];
-	assign arrow_matrix[2] = arrow_array[8:6];
-	assign arrow_matrix[3] = arrow_array[11:9];
-	assign arrow_matrix[4] = arrow_array[14:12];
-	assign arrow_matrix[5] = arrow_array[17:15];
-	assign arrow_matrix[6] = arrow_array[20:18];
-	assign arrow_matrix[7] = arrow_array[23:21];
-	assign arrow_matrix[8] = arrow_array[26:24];
-	assign arrow_matrix[9] = arrow_array[29:27];
-	assign arrow_matrix[10] = arrow_array[32:30];
-	assign arrow_matrix[11] = arrow_array[35:33];
-	assign arrow_matrix[12] = arrow_array[38:36];
-	assign arrow_matrix[13] = arrow_array[41:39];
-	assign arrow_matrix[14] = arrow_array[44:42];
-	assign arrow_matrix[15] = arrow_array[47:45];
-	assign arrow_matrix[16] = arrow_array[50:48];
-	assign arrow_matrix[17] = arrow_array[53:51];
-	assign arrow_matrix[18] = arrow_array[56:54];
-	assign arrow_matrix[19] = arrow_array[59:57];
-	assign arrow_matrix[20] = arrow_array[62:60];
-	assign arrow_matrix[21] = arrow_array[65:63];
-	assign arrow_matrix[22] = arrow_array[68:66];
-	assign arrow_matrix[23] = arrow_array[71:69];
-	assign arrow_matrix[24] = arrow_array[74:72];
-	assign arrow_matrix[25] = arrow_array[77:75];
+	assign arrow_matrix[0] = p1_arrow_array[2:0];
+	assign arrow_matrix[1] = p1_arrow_array[5:3];
+	assign arrow_matrix[2] = p1_arrow_array[8:6];
+	assign arrow_matrix[3] = p1_arrow_array[11:9];
+	assign arrow_matrix[4] = p1_arrow_array[14:12];
+	assign arrow_matrix[5] = p1_arrow_array[17:15];
+	assign arrow_matrix[6] = p1_arrow_array[20:18];
+	assign arrow_matrix[7] = p1_arrow_array[23:21];
+	assign arrow_matrix[8] = p1_arrow_array[26:24];
+	assign arrow_matrix[9] = p1_arrow_array[29:27];
+	assign arrow_matrix[10] = p1_arrow_array[32:30];
+	assign arrow_matrix[11] = p1_arrow_array[35:33];
+	assign arrow_matrix[12] = p1_arrow_array[38:36];
+	assign arrow_matrix[13] = p1_arrow_array[41:39];
+	assign arrow_matrix[14] = p1_arrow_array[44:42];
+	assign arrow_matrix[15] = p1_arrow_array[47:45];
+	assign arrow_matrix[16] = p1_arrow_array[50:48];
+	assign arrow_matrix[17] = p1_arrow_array[53:51];
+	assign arrow_matrix[18] = p1_arrow_array[56:54];
+	assign arrow_matrix[19] = p1_arrow_array[59:57];
+	assign arrow_matrix[20] = p1_arrow_array[62:60];
+	assign arrow_matrix[21] = p1_arrow_array[65:63];
+	assign arrow_matrix[22] = p1_arrow_array[68:66];
+	assign arrow_matrix[23] = p1_arrow_array[71:69];
+	assign arrow_matrix[24] = p1_arrow_array[74:72];
+	assign arrow_matrix[25] = p1_arrow_array[77:75];
 
 	
 	//integer address; // Q: unsure as to what this actually does, but seems to work?
