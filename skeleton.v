@@ -7,7 +7,7 @@ module skeleton(resetn,
 	VGA_CLK,   														//	VGA Clock
 	VGA_HS,															//	VGA H_SYNC
 	VGA_VS,															//	VGA V_SYNC
-	VGA_BLANK,														//	VGA BLANK
+	VGA_BLANK,														//	VGA BLANKgtg
 	VGA_SYNC,														//	VGA SYNC
 	VGA_R,   														//	VGA Red[9:0]
 	VGA_G,	 														//	VGA Green[9:0]
@@ -66,13 +66,13 @@ module skeleton(resetn,
 	wire [2:0] player2_index0,  player2_index1,  player2_index2,  player2_index3,  player2_index4,  player2_index5,  player2_index6,  player2_index7,  player2_index8,  player2_index9;
 	wire [2:0] player2_index10, player2_index11, player2_index12, player2_index13, player2_index14, player2_index15, player2_index16, player2_index17, player2_index18, player2_index19;
 	wire [2:0] player2_index20, player2_index21, player2_index22, player2_index23, player2_index24, player2_index25, player2_index26, player2_index27, player2_index28, player2_index29;
+	wire [1:0] player1_good_bad, player2_good_bad;
 
-
-	processor player1_processor(clock, game_reset, player1_key_pressed, player1_arrow_input, player1_score, dmem_data_in_player1, dmem_address_player1, dmem_out_player1, 1'b1,
+	processor player1_processor(clock, game_reset, player1_key_pressed, player1_arrow_input, player1_score, dmem_data_in_player1, dmem_address_player1, dmem_data_out_player1, player1_good_bad,
 								player1_index0,  player1_index1,  player1_index2,  player1_index3,  player1_index4,  player1_index5,  player1_index6,  player1_index7,  player1_index8,  player1_index9,
 								player1_index10, player1_index11, player1_index12, player1_index13, player1_index14, player1_index15, player1_index16, player1_index17, player1_index18, player1_index19,
 								player1_index20, player1_index21, player1_index22, player1_index23, player1_index24, player1_index25, player1_index26, player1_index27, player1_index28, player1_index29);
-	processor player2_processor(clock, game_reset, player2_key_pressed, player2_arrow_input, player2_score, dmem_data_in_player2, dmem_address_player2, dmem_out_player2, 1'b0,
+	processor player2_processor(clock, game_reset, player2_key_pressed, player2_arrow_input, player2_score, dmem_data_in_player2, dmem_address_player2, dmem_data_out_data_player2, player2_good_bad,
 								player2_index0,  player2_index1,  player2_index2,  player2_index3,  player2_index4,  player2_index5,  player2_index6,  player2_index7,  player2_index8,  player2_index9,
 								player2_index10, player2_index11, player2_index12, player2_index13, player2_index14, player2_index15, player2_index16, player2_index17, player2_index18, player2_index19,
 								player2_index20, player2_index21, player2_index22, player2_index23, player2_index24, player2_index25, player2_index26, player2_index27, player2_index28, player2_index29);
@@ -136,6 +136,14 @@ module skeleton(resetn,
 	// SEVEN SEGMENT DISPLAYS
 	binary_to_seven_segment_converter(player1_score, seg5, seg6, seg7, seg8);
 	binary_to_seven_segment_converter(player2_score, seg1, seg2, seg3, seg4);
+	//wire [9:0] debug_sevseg1, debug_sevseg2;
+	//assign debug_sevseg1[2:0] = player1_index0;
+	//assign debug_sevseg1[9:3] = 7'b0;
+	//assign debug_sevseg2[2:0] = player1_index24;
+	//assign debug_sevseg2[9:3] = 7'b0;
+	//binary_to_seven_segment_converter(debug_sevseg1, seg5, seg6, seg7, seg8);
+	//binary_to_seven_segment_converter(debug_sevseg2, seg1, seg2, seg3, seg4);
+
 	
 	// some LEDs that you could use for debugging if you wanted
 	assign leds = 8'b00101011;

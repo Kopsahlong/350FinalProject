@@ -89,7 +89,7 @@ module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dm
 		assign flush = jr_isa_XS || branch_XS || bex_branch_XS;
 		assign stall = lw_isa_MS && (rd_MS_eq_rs_XS || rd_MS_eq_rt_XS || rd_XS_eq_rd_MS);
 
-		wire screenIndexReg1, screenIndexReg2, screenIndexReg3;
+		wire [31:0] screenIndexReg1, screenIndexReg2, screenIndexReg3;
 		assign  index0 = screenIndexReg1[2:0];
 		assign  index1 = screenIndexReg1[5:3];
 		assign  index2 = screenIndexReg1[8:6];
