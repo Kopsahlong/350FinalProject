@@ -13,7 +13,7 @@ module skeleton(resetn,
 	VGA_G,	 														//	VGA Green[9:0]
 	VGA_B,															//	VGA Blue[9:0]
 	CLOCK_50,
-	color_select);  													// 50 MHz clock
+	color_select, shakeyShake1In, shakeyShake2In, shakeyShake1Out, shakeyShake2Out);  													// 50 MHz clock
 		
 	////////////////////////	VGA	////////////////////////////
 	output			VGA_CLK;   				//	VGA Clock
@@ -26,6 +26,11 @@ module skeleton(resetn,
 	output	[7:0]	VGA_B;   				//	VGA Blue[9:0]
 	input			CLOCK_50;
 	input	[7:0]   color_select;
+	input shakeyShake1In, shakeyShake2In;
+	output shakeyShake1Out, shakeyShake2Out;
+	
+	assign shakeyShake1Out = shakeyShake1In;
+	assign shakeyShake2Out = shakeyShake2In;
 
 	////////////////////////	PS2	////////////////////////////
 	input 			resetn;
@@ -135,7 +140,8 @@ module skeleton(resetn,
 
 	
 	// some LEDs that you could use for debugging if you wanted
-	assign leds = 8'b00101011;
+	assign leds[7:1] = 7'b0;
+	assign leds[0] = shakeyShake1In;
 		
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);
@@ -150,7 +156,7 @@ module skeleton(resetn,
 								 .r_data(VGA_R),
 								 .select(color_select),
 								 .player1_good_bad(player1_good_bad),
-								 .player2_good_bad(player2_good_bad).
+								 .player2_good_bad(player2_good_bad),
 								 .player1_indexes(player1_indexes),
 								 .player2_indexes(player2_indexes));
 	

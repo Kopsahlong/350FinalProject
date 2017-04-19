@@ -57,7 +57,7 @@ wire [1:0] p1_indicator, p2_indicator;
 
 //assign address = 19'd300800;
 
-index_identifier my_index_identifier(.address(ADDR), .arrow_array(player1_indexes), .p1_indicator(player1_good_bad), .p2_indicator(player2_good_bad), .clock(clock), .index(index));
+index_identifier my_index_identifier(.address(ADDR), .p1_arrow_array(player1_indexes), .p1_arrow_array(player2_indexes), .p1_indicator(player1_good_bad), .p2_indicator(player2_good_bad), .clock(clock), .index(index));
 
 //assign index = 8'b01;
 

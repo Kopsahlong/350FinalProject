@@ -5,9 +5,6 @@ module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dm
 	input [7:0] ps2_out;
 
 	output [77:0] screenIndexes;
-	output [3:0] index0,  index1,  index2,  index3,  index4,  index5,  index6,  index7,  index8,  index9;
-	output [3:0] index10, index11, index12, index13, index14, index15, index16, index17, index18, index19;
-	output [3:0] index20, index21, index22, index23, index24, index25, index26, index27, index28, index29;
 	
 	output [9:0] score;
 	output [1:0] good_bad;
