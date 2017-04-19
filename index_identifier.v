@@ -1,6 +1,6 @@
 module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p2_indicator, clock, index);
 	input [18:0] address;
-	input [77:0] p1_arrow_array, p1_arrow_array; // 3*26 = 78 indices
+	input [77:0] p1_arrow_array, p2_arrow_array; // 3*26 = 78 indices
 	input [1:0] p1_indicator, p2_indicator;
 	input clock;
 	output [7:0] index;

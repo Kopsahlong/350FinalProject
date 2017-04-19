@@ -29,8 +29,8 @@ module skeleton(resetn,
 	input shakeyShake1In, shakeyShake2In;
 	output shakeyShake1Out, shakeyShake2Out;
 	
-	assign shakeyShake1Out = shakeyShake1In;
-	assign shakeyShake2Out = shakeyShake2In;
+	//assign shakeyShake1Out = shakeyShake1In;
+	//assign shakeyShake2Out = shakeyShake2In;
 
 	////////////////////////	PS2	////////////////////////////
 	input 			resetn;
@@ -141,7 +141,7 @@ module skeleton(resetn,
 	
 	// some LEDs that you could use for debugging if you wanted
 	assign leds[7:1] = 7'b0;
-	assign leds[0] = shakeyShake1In;
+	assign leds[0] = ~shakeyShake1In;
 		
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);
