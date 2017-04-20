@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/simulation/modelsim
 vAltera_UP_PS2_Command_Out
-Z1 !s110 1489163009
+Z1 !s110 1489166218
 !i10b 1
 !s100 ZjDIV:z^W4aE7ECD]ReVK0
 I_hY9nFK7<;=GQ9ac1g`5W2
@@ -23,7 +23,7 @@ Z5 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z6 !s108 1489163009.000000
+Z6 !s108 1489166218.000000
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Altera_UP_PS2_Command_Out.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Altera_UP_PS2_Command_Out.v|
 !i113 1
@@ -31,7 +31,7 @@ Z7 o-vlog01compat -work work
 Z8 !s92 -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject
 n@altera_@u@p_@p@s2_@command_@out
 vAltera_UP_PS2_Data_In
-R1
+Z9 !s110 1489166217
 !i10b 1
 !s100 ee^TmQcGZ[E_>UMojW[Zg0
 I=4M<ANJR:UFMQ[P?gRAF83
@@ -45,7 +45,7 @@ R5
 r1
 !s85 0
 31
-Z9 !s108 1489163008.000000
+Z10 !s108 1489166217.000000
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Altera_UP_PS2_Data_In.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Altera_UP_PS2_Data_In.v|
 !i113 1
@@ -53,238 +53,238 @@ R7
 R8
 n@altera_@u@p_@p@s2_@data_@in
 valu_32b
-Z10 !s110 1489163004
+Z11 !s110 1489166212
 !i10b 1
 !s100 IMG6UH?hP`EX;gAOh;?@e0
 I_T[<U]BWdI53DeefEbdQB0
 R2
 R0
-Z11 w1492376036
-Z12 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v
-Z13 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v
+Z12 w1492376036
+Z13 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v
+Z14 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v
 L0 355
 R5
 r1
 !s85 0
 31
-Z14 !s108 1489163002.000000
-Z15 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v|
-Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v|
+Z15 !s108 1489166212.000000
+Z16 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v|
+Z17 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v|
 !i113 1
 R7
 R8
 vand_32b
-Z17 !s110 1489163005
+Z18 !s110 1489166214
 !i10b 1
 !s100 KK6]Hc^[T3Rh5Mn3jHLTW2
 ISCfWicA81MWdzNDDiO]0e0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1047
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vbinary_to_seven_segment_converter
-Z18 !s110 1489163012
+Z19 !s110 1489166221
 !i10b 1
 !s100 g2_?5=A;EZ2h5a`PO=[>j0
 IdC25>G4Y;g[Cc6Dm`lFnQ0
 R2
 R0
-Z19 w1492438092
-Z20 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v
-Z21 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v
+Z20 w1492438092
+Z21 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v
+Z22 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v
 L0 1
 R5
 r1
 !s85 0
 31
-Z22 !s108 1489163011.000000
-Z23 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v|
-Z24 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v|
+Z23 !s108 1489166220.000000
+Z24 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v|
+Z25 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v|
 !i113 1
 R7
 R8
 vcarry_select_adder_32b
-R10
+Z26 !s110 1489166213
 !i10b 1
 !s100 YSakGaJ3ZI4hR2Jl]Kfb:3
 Ii0QS5<`?_ASNjQQ8eD]6O3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 858
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vcarry_select_adder_64b
-R10
+R26
 !i10b 1
 !s100 Dzefb@D?7VcANnKk>e1nV3
 IA<^][I;2JHbmkcee^[I9Q2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 897
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vcarry_select_subtracter_32b
-R17
+R26
 !i10b 1
 !s100 >I4nANnUFAYmW`VJQakHA3
 I_a1jNa8IizcJBlSSYX36@1
 R2
 R0
-R11
 R12
 R13
+R14
 L0 985
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vcounter32
-R10
+R26
 !i10b 1
 !s100 Z1PmKn3`c4;k3kIoH7?DX1
 IILW1EPmB0NWJnH1UjImi_1
 R2
 R0
-R11
 R12
 R13
+R14
 L0 802
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vdecoder_32b
-Z25 !s110 1489163007
+Z27 !s110 1489166216
 !i10b 1
 !s100 jUP141g57gPU^J^dBT8O22
 IUWB]N^a;?PfeFJS<I^6YK2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1440
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vdecoder_4b
-R25
+R27
 !i10b 1
 !s100 COA_hN:g[?j;8<<5WbRbf0
 I1b:LcAolJ]153F;Vj[Fg92
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1514
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vdecoder_8b
-R25
+R27
 !i10b 1
 !s100 7JXib62M^]<o4F[lUj33e2
 IR`K=71WR:J]lY[5e;o5:m3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1491
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vdivider_32b
-R10
+R26
 !i10b 1
 !s100 U8]A1OLX_WW8=_MHf9?mn3
 I2ZW<d4NQ1d^VnKaI8Y=V^3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 736
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vdmem
-Z26 !s110 1489163008
+R9
 !i10b 1
 !s100 Mf==1Z5X5eXB?1PVG7k`T3
 IL^]P]318z63VPBKk4LICg3
@@ -293,103 +293,103 @@ R0
 R3
 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/dmem.v
 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/dmem.v
-Z27 L0 39
+Z28 L0 39
 R5
 r1
 !s85 0
 31
-R9
+R10
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/dmem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/dmem.v|
 !i113 1
 R7
 R8
 vequal_to_checker_32b
-Z28 !s110 1489163006
+Z29 !s110 1489166215
 !i10b 1
 !s100 30P7BZh9=^?g^AA_bhiJF3
 ION_R3NWO>I<j<l<GRRebT1
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1313
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vequal_to_checker_5b
-R28
+R29
 !i10b 1
 !s100 IOom9E?l@oV]J5_O1;Yoi3
 Ii[4@IY3@2TFf8Q9_dm@3Q0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1345
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vequal_to_checker_6b
-R28
+R29
 !i10b 1
 !s100 P1ALMCT1dCJA8Jn1?f6HI2
 IkI7OE:TTebB7XT4lh;og@3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1323
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vfull_adder_1b
-R10
+R26
 !i10b 1
 !s100 B9=i9o@o`RFTgmi[KSP^J0
 I[oeIB?mzY40L;z:Gmhi;11
 R2
 R0
-R11
 R12
 R13
+R14
 L0 953
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vimem
-R26
+R9
 !i10b 1
 !s100 mRc`N<n9;SnR=4imM5oM]1
 I@^fa2g:ZbENeb[baYOIX`3
@@ -398,19 +398,19 @@ R0
 R3
 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/imem.v
 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/imem.v
-R27
+R28
 R5
 r1
 !s85 0
 31
-Z29 !s108 1489163007.000000
+Z30 !s108 1489166216.000000
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/imem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/imem.v|
 !i113 1
 R7
 R8
 vimg_data
-Z30 !s110 1489163011
+Z31 !s110 1489166220
 !i10b 1
 !s100 GBlh?2ICFPleSX187Fe_50
 IP1]IRnlmYHb?N06RhI]]<2
@@ -419,19 +419,19 @@ R0
 R3
 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_data.v
 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_data.v
-R27
+R28
 R5
 r1
 !s85 0
 31
-Z31 !s108 1489163010.000000
+Z32 !s108 1489166219.000000
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_data.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_data.v|
 !i113 1
 R7
 R8
 vimg_index
-Z32 !s110 1489163010
+Z33 !s110 1489166219
 !i10b 1
 !s100 @<K276MKjFKRASlzWJRnG3
 IPaC>GGL1VG_jJT27VEIHf2
@@ -445,78 +445,78 @@ R5
 r1
 !s85 0
 31
-R31
+R32
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_index.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_index.v|
 !i113 1
 R7
 R8
 vinstruction_decoder
-Z33 !s110 1489163003
+R11
 !i10b 1
 !s100 2S2;4cDO:G_`:fAI>:n9V1
 IJdYS8g74Q8D?jcHd?5YR53
 R2
 R0
-R11
 R12
 R13
+R14
 L0 315
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vinverter_32b
-R17
+R26
 !i10b 1
 !s100 ^Ci7;iI=j_F`YZh>JT>4@0
 Ig1368Ta?LY=LcVSWiDj_[0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1015
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vinverter_64b
-R17
+R18
 !i10b 1
 !s100 e2JhCN1g?Fho`K3N:B[W72
 IE[57C827Q::`M^77UAn2N3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1031
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vlcd
 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-R18
+R19
 !i10b 1
 !s100 4d9[jBL5f6iUZ]`z^C42R1
 IYSIZ6QA5DKXE9?39=MMb71
@@ -532,376 +532,376 @@ R5
 r1
 !s85 0
 31
-Z34 !s108 1489163012.000000
+!s108 1489166221.000000
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/lcd.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/lcd.sv|
 !i113 1
 o-sv -work work
 !s92 -sv -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject
 vleft_shift_16b
-R28
+R18
 !i10b 1
 !s100 7Ran[heASVEi8cVnniL9C2
 I0D>EVDMX?d1zTgcUodK280
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1186
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vleft_shift_1b
-R17
+R18
 !i10b 1
 !s100 fYo;EJoDU7zfYM]DSM]kV1
 I5j^AmR?UPK;m7:hiEY68=0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1121
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vleft_shift_2b
-R17
+R18
 !i10b 1
 !s100 <=L^YY3L@Y5H_2B]F?D@m0
 IHIQJEiYM1<kkN31;;@@lC3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1134
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vleft_shift_4b
-R17
+R18
 !i10b 1
 !s100 `Ra]oc6dijcgZ^@iXAJH=3
 I7^>k6b>UEPdceE;C4o>9O1
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1148
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vleft_shift_8b
-R17
+R18
 !i10b 1
 !s100 hoYoX[gknHLRdA:NXL<lV2
 Il;o>>j`1C[;9MM`zHMfhE3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1165
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vmult_div_32b
-R10
+R26
 !i10b 1
 !s100 ;6K?Q?]^cRfV<lTnNfC@Z1
 II14I6AFb`0ZLNg=Pa92Rk1
 R2
 R0
-R11
 R12
 R13
+R14
 L0 636
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vmultiplier_32b
-R10
+R26
 !i10b 1
 !s100 ;7_c2T3^R<M_1e2UfQOTd3
 I;>0fHj<V3kDPA1fc[=OE?1
 R2
 R0
-R11
 R12
 R13
+R14
 L0 665
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vmux_4_32b
-R28
+R29
 !i10b 1
 !s100 J1ZVG?DP=jJeYR@;30Q8D3
 IOPF<Odm]]Ozz63c@7FfSi2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1383
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vmux_4_5b
-R28
+R29
 !i10b 1
 !s100 1gET83b4e>YD1FgaXXJ=?2
 IZbkW6H4zh1H?[o73FaYO10
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1394
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vmux_8_1b
-R25
+R29
 !i10b 1
 !s100 AKEmlRn984aJE@:Y6QAik3
 InVo>OL[NTC9Ich7[P>cIA0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1420
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vmux_8_32b
-R25
+R29
 !i10b 1
 !s100 [LV<01@ocdQV_;ZkZ4koQ0
 IL5CZMOJ`K4:lJT@0H7dAB0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1405
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vnumToSegment
-R18
+R19
 !i10b 1
 !s100 >g@4P6^Q9<iTBkTnJ]mo70
 I7lBk48Bn4:RZg?V^0X>732
 R2
 R0
-R19
 R20
 R21
+R22
 L0 52
 R5
 r1
 !s85 0
 31
-R22
 R23
 R24
+R25
 !i113 1
 R7
 R8
 nnum@to@segment
 vor_32b
-R17
+R18
 !i10b 1
 !s100 UX01H=bfSANz7Aflk@J:W2
 Ib;PaelRmf_]ii`@1bG:5A3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1059
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vpipeline_register_DX
-R33
+R11
 !i10b 1
 !s100 hV4jo1EhD0YZPNzFEV8[m3
 I2Y=?T6_0V__ZPdZ>2>k0^0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 274
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 npipeline_register_@d@x
 vpipeline_register_FD
-R33
+R11
 !i10b 1
 !s100 DGlKXJ5:h]`beieO>NGk80
 IH=4_U6AY^RKnR@:]^81hF0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 265
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 npipeline_register_@f@d
 vpipeline_register_MW
-R33
+R11
 !i10b 1
 !s100 l=QRb=h?^iNdDIljgc4Fz1
 IXT@Xof=nbWFK77<Ce2m0H2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 299
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 npipeline_register_@m@w
 vpipeline_register_XM
-R33
+R11
 !i10b 1
 !s100 XnR2Sm7UM:H5FV5Wmh>;J0
 I_;zN2g?YFbZOZXI4_UbE32
 R2
 R0
-R11
 R12
 R13
+R14
 L0 285
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 npipeline_register_@x@m
 vpll
-R25
+R27
 !i10b 1
 !s100 el8m9?VhINk2D<LX>]oEj3
 IQS?mJ=liO08RZk7I[azjO0
@@ -910,19 +910,19 @@ R0
 R3
 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/pll.v
 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/pll.v
-R27
+R28
 R5
 r1
 !s85 0
 31
-R29
+R30
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/pll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/pll.v|
 !i113 1
 R7
 R8
 vpll_altpll
-R30
+R31
 !i10b 1
 !s100 2[X4]z<HMg5W5S4]lA8_11
 ITzoi;P:_9B5D[lMH6:eQG0
@@ -936,56 +936,35 @@ R5
 r1
 !s85 0
 31
-R22
+R23
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/db/pll_altpll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/db|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/db/pll_altpll.v|
 !i113 1
 R7
 !s92 -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/db
 vprocessor
-R33
+R11
 !i10b 1
 !s100 g<eR2OB[]8H?HaNmBF;YV0
 I9TFgYN<YVSS41P]K82oj:2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
-!i113 1
-R7
-R8
-vprocessor_tb
-!s110 1489163013
-!i10b 1
-!s100 C?:iG0l]:aa<P0a<=c^C_2
-IF<`;]32gL2iFYZH?ThQ701
-R2
-R0
-w1492438966
-8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor_tb.v
-FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor_tb.v
-L0 3
-R5
-r1
-!s85 0
-31
-R34
-!s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor_tb.v|
+R17
 !i113 1
 R7
 R8
 vPS2_Controller
-!s110 1489163002
+R11
 !i10b 1
 !s100 SBbk<]9<EO>4gfA4Nk28g0
 ID[5Mk08oIcRQ>7WaPOOLW1
@@ -999,7 +978,7 @@ R5
 r1
 !s85 0
 31
-Z35 !s108 1489163001.000000
+R15
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/PS2_Controller.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/PS2_Controller.v|
 !i113 1
@@ -1007,7 +986,7 @@ R7
 R8
 n@p@s2_@controller
 vPS2_Interface
-!s110 1489163001
+Z34 !s110 1489166211
 !i10b 1
 !s100 U_CGUUFDk3cUc^jbb>NfB2
 IVnCZEB?0HJY=aLS>bHaD10
@@ -1021,7 +1000,7 @@ R5
 r1
 !s85 0
 31
-R35
+Z35 !s108 1489166211.000000
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/PS2_Interface.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/PS2_Interface.v|
 !i113 1
@@ -1029,70 +1008,70 @@ R7
 R8
 n@p@s2_@interface
 vregfile_32b
-R10
+R26
 !i10b 1
 !s100 RS4Y@5h8dlKLPG=fAm7nH3
 I^XlK_c8N0ShAE;52jN3Nl3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 379
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vregister_32b
-R10
+R26
 !i10b 1
 !s100 Rc]XM`Kh3<Vd`Vdio4`ml1
 IRKmj00K433NN>:[31=NLl1
 R2
 R0
-R11
 R12
 R13
+R14
 L0 601
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vregister_64b
-R10
+R26
 !i10b 1
 !s100 bYBo=4kXFRebU5o6Y`aTj1
 IUI@GeVSTmF:W5B@fQimNG2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 618
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vReset_Delay
-Z36 !s110 1489163000
+R34
 !i10b 1
 !s100 <?EH4X[VcB<k?aKTEg:<H0
 I_RW@G8SiJOTTQiI3A2;Y]3
@@ -1106,7 +1085,7 @@ R5
 r1
 !s85 0
 31
-Z37 !s108 1489163000.000000
+R35
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Reset_Delay.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Reset_Delay.v|
 !i113 1
@@ -1114,139 +1093,139 @@ R7
 R8
 n@reset_@delay
 vright_shift_16b
-R28
+R29
 !i10b 1
 !s100 NNhWz`Lagi?KaedTQ03fM0
 I[_QOhdF0bRloOc8ZL;HC70
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1282
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vright_shift_1b
-R28
+R18
 !i10b 1
 !s100 eFe5eRI>=b@?YWVQbjEin0
 InQW1R]1:4H;BmPHl:H3YP0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1217
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vright_shift_2b
-R28
+R18
 !i10b 1
 !s100 DYm<W?HlFkTVT:`2<kO_Q0
 IlZ<zh^CDBBU592f3k8Yj91
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1230
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vright_shift_4b
-R28
+R29
 !i10b 1
 !s100 H^943XeHLDQdaQo@?ae3I1
 I9kIMQa7g?gR[c95GhSJna0
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1244
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vright_shift_8b
-R28
+R29
 !i10b 1
 !s100 g_;m`e>16;=A]D>;G1d3K3
 If6l<aViFjU_:MezO><afJ3
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1261
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vrshift1_64b
-R28
+R29
 !i10b 1
 !s100 CK8CK>iWIoG7<OMEGLW^z1
 IlCLj<Y2oVQ;MHQQ:Y>JYb2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1367
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vskeleton
-R36
+R34
 !i10b 1
-!s100 1cVE1185dbaGH:ZERJl8D2
-Ib`3M_i@]6GmzSZ?d_61Pc3
+!s100 z1Fo=XHk0IEofbHIW^iEi3
+I?:4gZ`[`3ozLZUZ[K?MA]1
 R2
 R0
-w1492433671
+w1492441413
 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/skeleton.v
 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/skeleton.v
 L0 1
@@ -1254,77 +1233,77 @@ R5
 r1
 !s85 0
 31
-R37
+R35
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/skeleton.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/skeleton.v|
 !i113 1
 R7
 R8
 vsll_32b
-R17
+R18
 !i10b 1
 !s100 bK70Kl:eM]RAMVl:]01Fn3
 If[Schj2df@7LYPI0HmedR2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1071
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vslow_adder_8b
-R17
+R26
 !i10b 1
 !s100 aNN]SHQe;Iog]7[b@FgTG2
 Ig`e>JVRoH[`8UcAnLzVBe2
 R2
 R0
-R11
 R12
 R13
+R14
 L0 966
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vsra_32b
-R17
+R18
 !i10b 1
 !s100 S7]VJ>30R?RK2ab45Q7kc1
 I3L;1VXg9cRzSHHD[GJ8Q50
 R2
 R0
-R11
 R12
 R13
+R14
 L0 1095
 R5
 r1
 !s85 0
 31
-R14
 R15
 R16
+R17
 !i113 1
 R7
 R8
 vVGA_Audio_PLL
-R36
+!s110 1489166210
 !i10b 1
 !s100 ]_G[h[5PmjnW=UbgX^dRW3
 I2]o;]N]QY4moG<;lbf8Ol2
@@ -1333,12 +1312,12 @@ R0
 R3
 8Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/VGA_Audio_PLL.v
 FZ:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/VGA_Audio_PLL.v
-R27
+R28
 R5
 r1
 !s85 0
 31
-!s108 1489162999.000000
+!s108 1489166210.000000
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/VGA_Audio_PLL.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/VGA_Audio_PLL.v|
 !i113 1
@@ -1367,7 +1346,7 @@ R6
 R7
 R8
 vvideo_sync_generator
-R32
+R33
 !i10b 1
 !s100 5jkgiEod8eSjhRXb_KO0n3
 I;^=48=CCGUc71cNSCPcYS3
@@ -1381,7 +1360,7 @@ R5
 r1
 !s85 0
 31
-R31
+R6
 !s107 Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/video_sync_generator.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject|Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/video_sync_generator.v|
 !i113 1

@@ -1,0 +1,241 @@
+# Reading C:/altera/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do skeleton_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/VGA_Audio_PLL.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:50 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/VGA_Audio_PLL.v 
+# -- Compiling module VGA_Audio_PLL
+# 
+# Top level modules:
+# 	VGA_Audio_PLL
+# End time: 12:16:50 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Reset_Delay.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:51 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Reset_Delay.v 
+# -- Compiling module Reset_Delay
+# 
+# Top level modules:
+# 	Reset_Delay
+# End time: 12:16:51 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/skeleton.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:51 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/skeleton.v 
+# -- Compiling module skeleton
+# 
+# Top level modules:
+# 	skeleton
+# End time: 12:16:51 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/PS2_Interface.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:51 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/PS2_Interface.v 
+# -- Compiling module PS2_Interface
+# 
+# Top level modules:
+# 	PS2_Interface
+# End time: 12:16:51 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/PS2_Controller.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:52 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/PS2_Controller.v 
+# -- Compiling module PS2_Controller
+# 
+# Top level modules:
+# 	PS2_Controller
+# End time: 12:16:52 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:52 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/processor.v 
+# -- Compiling module processor
+# -- Compiling module pipeline_register_FD
+# -- Compiling module pipeline_register_DX
+# -- Compiling module pipeline_register_XM
+# -- Compiling module pipeline_register_MW
+# -- Compiling module instruction_decoder
+# -- Compiling module alu_32b
+# -- Compiling module regfile_32b
+# -- Compiling module register_32b
+# -- Compiling module register_64b
+# -- Compiling module mult_div_32b
+# -- Compiling module multiplier_32b
+# -- Compiling module divider_32b
+# -- Compiling module counter32
+# -- Compiling module carry_select_adder_32b
+# -- Compiling module carry_select_adder_64b
+# -- Compiling module full_adder_1b
+# -- Compiling module slow_adder_8b
+# -- Compiling module carry_select_subtracter_32b
+# -- Compiling module inverter_32b
+# -- Compiling module inverter_64b
+# -- Compiling module and_32b
+# -- Compiling module or_32b
+# -- Compiling module sll_32b
+# -- Compiling module sra_32b
+# -- Compiling module left_shift_1b
+# -- Compiling module left_shift_2b
+# -- Compiling module left_shift_4b
+# -- Compiling module left_shift_8b
+# -- Compiling module left_shift_16b
+# -- Compiling module right_shift_1b
+# -- Compiling module right_shift_2b
+# -- Compiling module right_shift_4b
+# -- Compiling module right_shift_8b
+# -- Compiling module right_shift_16b
+# -- Compiling module equal_to_checker_32b
+# -- Compiling module equal_to_checker_6b
+# -- Compiling module equal_to_checker_5b
+# -- Compiling module rshift1_64b
+# -- Compiling module mux_4_32b
+# -- Compiling module mux_4_5b
+# -- Compiling module mux_8_32b
+# -- Compiling module mux_8_1b
+# -- Compiling module decoder_32b
+# -- Compiling module decoder_8b
+# -- Compiling module decoder_4b
+# 
+# Top level modules:
+# 	processor
+# 	decoder_8b
+# 	decoder_4b
+# End time: 12:16:56 on Mar 10,2017, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/pll.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:56 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 12:16:56 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/imem.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:56 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/imem.v 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 12:16:57 on Mar 10,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/dmem.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:57 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/dmem.v 
+# -- Compiling module dmem
+# 
+# Top level modules:
+# 	dmem
+# End time: 12:16:57 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Altera_UP_PS2_Data_In.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:57 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Altera_UP_PS2_Data_In.v 
+# -- Compiling module Altera_UP_PS2_Data_In
+# 
+# Top level modules:
+# 	Altera_UP_PS2_Data_In
+# End time: 12:16:57 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Altera_UP_PS2_Command_Out.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:58 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/Altera_UP_PS2_Command_Out.v 
+# -- Compiling module Altera_UP_PS2_Command_Out
+# 
+# Top level modules:
+# 	Altera_UP_PS2_Command_Out
+# End time: 12:16:58 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/vga_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:58 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/vga_controller.v 
+# -- Compiling module vga_controller
+# 
+# Top level modules:
+# 	vga_controller
+# End time: 12:16:58 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/video_sync_generator.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:58 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/video_sync_generator.v 
+# -- Compiling module video_sync_generator
+# 
+# Top level modules:
+# 	video_sync_generator
+# End time: 12:16:59 on Mar 10,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_index.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:59 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_index.v 
+# -- Compiling module img_index
+# 
+# Top level modules:
+# 	img_index
+# End time: 12:16:59 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_data.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:16:59 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/img_data.v 
+# -- Compiling module img_data
+# 
+# Top level modules:
+# 	img_data
+# End time: 12:17:00 on Mar 10,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/db {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:17:00 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/db" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 12:17:00 on Mar 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:17:00 on Mar 10,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/binary_to_seven_segment_converter.v 
+# -- Compiling module binary_to_seven_segment_converter
+# -- Compiling module numToSegment
+# 
+# Top level modules:
+# 	binary_to_seven_segment_converter
+# End time: 12:17:01 on Mar 10,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject {Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/lcd.sv}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:17:01 on Mar 10,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject" Z:/Addison/Documents/SCHOOL/Duke-Junior/ECE350/350FinalProject/lcd.sv 
+# -- Compiling module lcd
+# 
+# Top level modules:
+# 	lcd
+# End time: 12:17:02 on Mar 10,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 

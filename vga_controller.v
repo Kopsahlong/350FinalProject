@@ -45,19 +45,36 @@ begin
 end
 //////////////////////////
 //////INDEX addr.
+
+wire [77:0] arrow_array; // 3*26 = 78 indices
+wire [1:0] p1_indicator, p2_indicator;
+
+//assign address = 19'd300800;
+
+assign arrow_array = 78'b000000000000000000000000001100000000000000000000000000000100000000000000000110;
+assign p1_indicator = 2'b11;
+assign p2_indicator = 2'b01;
+index_identifier my_index_identifier(ADDR, arrow_array, p1_indicator, p2_indicator, clock, index);
+
+//assign index = 8'b01;
+
 assign VGA_CLK_n = ~iVGA_CLK;
-img_data	img_data_inst (
+/*img_data	img_data_inst (
 	.address ( ADDR ),
 	.clock ( VGA_CLK_n ),
 	.q ( index ) // Index output 
-	);
-	
+	);*/
+
+//always@(VGA_CLK_n)
+//begin
+//end
+
 /////////////////////////
 //////Add switch-input logic here
 	
 //////Color table output
 img_index	img_index_inst (
-	.address ( select ),
+	.address ( index ),
 	.clock ( iVGA_CLK ),
 	.q ( bgr_data_raw)
 	);	
