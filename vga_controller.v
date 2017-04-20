@@ -57,11 +57,11 @@ wire [1:0] p1_indicator, p2_indicator;
 
 //assign address = 19'd300800;
 
-index_identifier my_index_identifier(.address(ADDR), .p1_arrow_array(player1_indexes), .p2_arrow_array(player2_indexes), .p1_indicator(player1_good_bad), .p2_indicator(player2_good_bad), .clock(clock), .index(index));
+assign VGA_CLK_n = ~iVGA_CLK;
+index_identifier my_index_identifier(.address(ADDR), .p1_arrow_array(player1_indexes), .p2_arrow_array(player2_indexes), .p1_indicator(player1_good_bad), .p2_indicator(player2_good_bad), .clock(VGA_CLK_n), .index(index));
 
 //assign index = 8'b01;
 
-assign VGA_CLK_n = ~iVGA_CLK;
 /*img_data	img_data_inst (
 	.address ( ADDR ),
 	.clock ( VGA_CLK_n ),
@@ -80,7 +80,9 @@ img_index	img_index_inst (
 	.address ( index ),
 	.clock ( iVGA_CLK ),
 	.q ( bgr_data_raw)
-	);	
+	);
+	
+
 //////
 //////latch valid data at falling edge;
 always@(posedge VGA_CLK_n) bgr_data <= bgr_data_raw;

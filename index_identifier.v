@@ -5,6 +5,71 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 	input clock;
 	output [7:0] index;
 	
+<<<<<<< HEAD
+	// wires needed for images address and indexing
+	wire [18:0] image_addr;
+	wire [23:0] arrow_up_data_index, arrow_down_data_index, arrow_left_data_index, arrow_right_data_index, shakeyshake_data_index;
+	
+	wire [7:0] arrow_up_data_index_un_extended;
+	
+	// blocks needed for images
+	arrow_up_img_data	arrow_up_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( arrow_up_data_index_un_extended )
+	);
+	arrow_down_img_data	arrow_down_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( arrow_down_data_index )
+	);
+	arrow_left_img_data	arrow_left_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( arrow_left_data_index )
+	);
+	arrow_right_img_data	arrow_right_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( arrow_right_data_index )
+	);	
+	arrow_up_img_data	shakeyshake_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( shakeyshake_data_index )
+	);
+	
+	assign arrow_up_data_index[7:0] = arrow_up_data_index_un_extended;
+	assign arrow_up_data_index[23:8] = 16'd0;
+	
+	//assign arrow_up_data_index = 8'hb;
+	/*img_data	arrow_down_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( arrow_down_data_index )
+	);
+	img_data	arrow_left_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( arrow_left_data_index )
+	);
+	img_data	arrow_right_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( arrow_right_data_index )
+	);
+	img_data	shakeyshake_data_inst (
+	.address ( image_addr[18:0] ),
+	.clock ( clock ),
+	.q ( shakeyshake_data_index )
+	);*/
+	
+	/*assign arrow_down_data_index = arrow_up_data_index;
+	assign arrow_left_data_index = arrow_up_data_index;
+	assign arrow_right_data_index = arrow_up_data_index;
+	assign shakeyshake_data_index = arrow_up_data_index;*/
+	
+=======
 	wire [18:0] image_addr;
 
 	// blocks needed for images
@@ -33,6 +98,7 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 	.clock ( clock ),
 	.q ( shakeyshake_data_index )
 	);
+>>>>>>> f53bbfb082a583c1716c866ab1722b781086f7a9
 
 	// transform array to matrix 
 	wire [2:0] arrow_matrix [25:0];
@@ -73,7 +139,7 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 	assign right_index = 8'h005; // 0067a9
 	assign up_index = 8'h006; //666dab
 	assign down_index = 8'h007; //674ea7
-	assign shakeyshake_index = 8'h008; //abcdef
+	assign shakeyshake_index = 8'h008; //abcdef                                             
 	assign default_index = 8'h000; //f0e7df
 
 	// hard coded constants that can be changed
@@ -147,23 +213,23 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 	// figure out which indices to pull arrow values from
 	wire [18:0] arrow_3_N_index, arrow_2_N_index, arrow_1_N_index, arrow_0_N_index;
 	assign arrow_0_N_index = N;
-	assign arrow_1_N_index = N-18'd1;
-	assign arrow_2_N_index = N-18'd2;
-	assign arrow_3_N_index = N-18'd3;
+	assign arrow_1_N_index = N-19'd1;
+	assign arrow_2_N_index = N-19'd2;
+	assign arrow_3_N_index = N-19'd3;
 
 	// check to see if the index is valid
 	wire arrow_index_0_valid, arrow_index_1_valid, arrow_index_2_valid, arrow_index_3_valid;
-	assign arrow_index_0_valid = (arrow_0_N_index < 18'd77) & (arrow_0_N_index >= 18'd0);
-	assign arrow_index_1_valid = (arrow_1_N_index < 18'd77) & (arrow_1_N_index >= 18'd0);
-	assign arrow_index_2_valid = (arrow_2_N_index < 18'd77) & (arrow_2_N_index >= 18'd0);
-	assign arrow_index_3_valid = (arrow_3_N_index < 18'd77) & (arrow_3_N_index >= 18'd0);
+	assign arrow_index_0_valid = (arrow_0_N_index < 19'd77) & (arrow_0_N_index >= 19'd0);
+	assign arrow_index_1_valid = (arrow_1_N_index < 19'd77) & (arrow_1_N_index >= 19'd0);
+	assign arrow_index_2_valid = (arrow_2_N_index < 19'd77) & (arrow_2_N_index >= 19'd0);
+	assign arrow_index_3_valid = (arrow_3_N_index < 19'd77) & (arrow_3_N_index >= 19'd0);
 
 	// if the state index is valid, use that. otherwise, use 0 to not cause an error in indexing matrix
 	wire [18:0] arrow_0_index, arrow_1_index, arrow_2_index, arrow_3_index;
-	assign arrow_0_index = arrow_index_0_valid ? arrow_0_N_index : 18'd0;
-	assign arrow_1_index = arrow_index_1_valid ? arrow_1_N_index : 18'd0;
-	assign arrow_2_index = arrow_index_2_valid ? arrow_2_N_index : 18'd0;
-	assign arrow_3_index = arrow_index_3_valid ? arrow_3_N_index : 18'd0;
+	assign arrow_0_index = arrow_index_0_valid ? arrow_0_N_index : 19'd0;
+	assign arrow_1_index = arrow_index_1_valid ? arrow_1_N_index : 19'd0;
+	assign arrow_2_index = arrow_index_2_valid ? arrow_2_N_index : 19'd0;
+	assign arrow_3_index = arrow_index_3_valid ? arrow_3_N_index : 19'd0;
 
 	// finally, retrieve your arrow values
 	wire [2:0] arrow_0_value, arrow_1_value, arrow_2_value, arrow_3_value;
@@ -174,10 +240,20 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 
 	// if any of these values matches your index and is valid
 	wire arrow_0_present, arrow_1_present, arrow_2_present, arrow_3_present;
+<<<<<<< HEAD
+	assign arrow_0_present = ((arrow_0_value==lane_type)&(arrow_index_0_valid));
+	assign arrow_1_present = ((arrow_1_value==lane_type)&(arrow_index_1_valid));
+	assign arrow_2_present = ((arrow_2_value==lane_type)&(arrow_index_2_valid));
+	assign arrow_3_present = ((arrow_3_value==lane_type)&(arrow_index_3_valid));
+	
+	wire arrow_present;
+	assign arrow_present = arrow_0_present | arrow_1_present | arrow_2_present | arrow_3_present;
+=======
 	assign arrow_0_present = (((arrow_0_value==lane_type)&(arrow_index_0_valid))
 	assign arrow_1_present = ((arrow_1_value==lane_type)&(arrow_index_1_valid)) 
 	assign arrow_2_present = ((arrow_2_value==lane_type)&(arrow_index_2_valid))
 	assign arrow_3_present = ((arrow_3_value==lane_type)&(arrow_index_3_valid)));
+>>>>>>> f53bbfb082a583c1716c866ab1722b781086f7a9
 	
 	// now calculate the pixel_x and pixel_y value for each potentially visible state
 	wire [18:0] arrow_pixel_x, arrow_pixel_y;
@@ -189,6 +265,15 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 	assign lane_number3 = in_down_range ? 19'd3 : lane_number2;
 	assign lane_number = in_right_range ? 19'd4 : lane_number3;
 
+<<<<<<< HEAD
+	assign arrow_pixel_x = diff_x - LANE_WIDTH*lane_number;
+
+	wire [18:0] arrow_pixel_y0,arrow_pixel_y1,arrow_pixel_y2,arrow_pixel_y3;
+	assign arrow_pixel_y3 = arrow_3_present ? (STATE_HEIGHT*(N-19'd3)) : 19'd999; // last choice
+	assign arrow_pixel_y2 = arrow_2_present ? (STATE_HEIGHT*(N-19'd2)) : arrow_pixel_y3;
+	assign arrow_pixel_y1 = arrow_1_present ? (STATE_HEIGHT*(N-19'd1)) : arrow_pixel_y2;
+	assign arrow_pixel_y0 = arrow_0_present ? (STATE_HEIGHT*N) : arrow_pixel_y1; // first choice
+=======
 	assign arrow_pixel_x = diff_x - STATE_HEIGHT*lane_number;
 
 	wire [18:0] arrow_pixel_y0,arrow_pixel_y1,arrow_pixel_y2,arrow_pixel_y3;
@@ -196,11 +281,25 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 	assign arrow_pixel_y2 = arrow_2_present ? (16*(N-2)) : arrow_pixel_y2;
 	assign arrow_pixel_y1 = arrow_1_present ? (16*(N-1)) : arrow_pixel_y1;
 	assign arrow_pixel_y0 = arrow_0_present ? (16*N) : arrow_pixel_y0;
+>>>>>>> f53bbfb082a583c1716c866ab1722b781086f7a9
 
 	assign arrow_pixel_y = pixel_y - arrow_pixel_y0;
 
 
 	// calculate address to pull
+<<<<<<< HEAD
+	assign image_addr = arrow_pixel_x + arrow_pixel_y*LANE_HEIGHT;
+
+	// now choose which of the image indices to set as your final index
+	wire [7:0] arrow_range_index0, arrow_range_index1, arrow_range_index2, arrow_range_index3;
+	assign arrow_range_index0 = (arrow_present & in_shake_range) ? shakeyshake_data_index[7:0] : default_index;
+	assign arrow_range_index1 = (arrow_present & in_left_range) ? arrow_left_data_index[7:0] : arrow_range_index0;
+	assign arrow_range_index2 = (arrow_present & in_up_range) ? arrow_up_data_index[7:0] : arrow_range_index1;
+	assign arrow_range_index3 = (arrow_present & in_down_range) ? arrow_down_data_index[7:0] : arrow_range_index2;
+	assign arrow_range_index = (arrow_present & in_right_range) ? arrow_right_data_index[7:0] : arrow_range_index3;
+
+	// -- calculate the static block index if you're in the top 4 states -- // // TODO: LATER choose default if no arrow is present
+=======
 	image_addr = arrow_pixel_x + arrow_pixel_y*640;
 
 	// now choose which of the image indices to set as your final index
@@ -212,18 +311,21 @@ module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p
 	assign arrow_range_index = (arrow_present & in_right_range) ? arrow_right_data_index : arrow_range_index3;
 
 	// -- calculate the static block index if you're in the top 4 states -- // // TODO: LATER
+>>>>>>> f53bbfb082a583c1716c866ab1722b781086f7a9
 	wire [7:0] arrow_block_index, arrow_block_index0, arrow_block_index1, arrow_block_index2, arrow_block_index3;
 	assign arrow_block_index0 = (in_shake_range) ? shakeyshake_index : default_index;
 	assign arrow_block_index1 = (in_left_range) ? left_index : arrow_block_index0;
 	assign arrow_block_index2 = (in_up_range) ? up_index : arrow_block_index1;
 	assign arrow_block_index3 = (in_down_range) ? down_index : arrow_block_index2;
-	assign arrow_block_index = (in_right_range) ? right_index : arrow_block_index3;	
+	assign arrow_block_index = (in_right_range) ? right_index : arrow_block_index3;
 
 	// -- now choose which of the selected indexes to use -- //
 	wire [7:0] index0, index1, index2;
 	assign index0 = in_p1_indicator_range ? p1_indicator_index : default_index;
 	assign index1 = in_p2_indicator_range ? p2_indicator_index : index0;
 	assign index2 = in_arrow_range ? arrow_range_index : index1;
+	
+	// final index assignment 
 	assign index = in_arrow_block_range ? arrow_block_index : index2;
 
 endmodule
