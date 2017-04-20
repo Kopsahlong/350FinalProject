@@ -17,7 +17,7 @@ module index_identifier_background(address, p1_arrow_array, p2_arrow_array, p1_i
 	.clock ( clock ),
 	.q ( background_index )
 	);
-	arrow_up_img_data	arrow_up_data_inst (
+	shakeyShake_img_data	arrow_up_data_inst (
 	.address ( image_addr[18:0] ),
 	.clock ( clock ),
 	.q ( arrow_up_data_index )

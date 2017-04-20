@@ -225,7 +225,7 @@ CONTENT BEGIN
 	0da : 25d025;
 	0db : 00ffff;
 	0dc : 5644f9;
-	0DD  :   DDDDDD;
+	0dd : 13fff8;
 	0DE  :   DEDEDE;
 	0DF  :   DFDFDF;
 	0E0  :   E0E0E0;
