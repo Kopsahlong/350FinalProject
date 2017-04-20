@@ -1,4 +1,4 @@
-module index_identifier_background(address, p1_arrow_array, p2_arrow_array, p1_indicator, p2_indicator, clock, index);
+module index_identifier(address, p1_arrow_array, p2_arrow_array, p1_indicator, p2_indicator, clock, index);
 	input [18:0] address;
 	input [77:0] p1_arrow_array, p2_arrow_array; // 3*26 = 78 indices
 	input [1:0] p1_indicator, p2_indicator;
@@ -103,15 +103,21 @@ module index_identifier_background(address, p1_arrow_array, p2_arrow_array, p1_i
 
 	// colors for use TODO: input proper colors to these indices
 	wire [7:0] excellent_index, good_index, bad_index, left_index, right_index, up_index, down_index, shakeyshake_index, default_index;
-	assign excellent_index = 8'h0da; // green
-	assign good_index = 8'h0db; // yellow
-	assign bad_index = 8'h0d9; // red                                    
-	assign default_index = 8'h0dc; //f0e7df
+	assign excellent_index = 8'h001; // green
+	assign good_index = 8'h002; // yellow
+	assign bad_index = 8'h003; // red
+	assign left_index = 8'h004; // 068315
+	assign right_index = 8'h005; // 0067a9
+	assign up_index = 8'h006; //666dab
+	assign down_index = 8'h007; //674ea7
+	assign shakeyshake_index = 8'h008; //abcdef                                             
+	assign default_index = 8'h000; //f0e7df
 
 	// hard coded constants that can be changed
 	wire [18:0] SCREEN_WIDTH, SCREEN_HEIGHT, PLAY_HEIGHT, PLAYER_BORDER, LANE_WIDTH, LANE_HEIGHT, STATE_HEIGHT, INDICATOR_PANEL_HEIGHT;
 	assign SCREEN_WIDTH = 19'd640;
 	assign SCREEN_HEIGHT = 19'd480;
+	//assign PLAY_HEIGHT = 19'd432;
 	assign PLAYER_BORDER = 19'd320; //SCREEN_WIDTH/2
 	assign LANE_WIDTH = 19'd64; //SCREEN_WIDTH/10
 	assign LANE_HEIGHT = 19'd64; //LANE_WIDTH
@@ -167,6 +173,8 @@ module index_identifier_background(address, p1_arrow_array, p2_arrow_array, p1_i
 	select_indicator_index p2_indicator_selector(p2_indicator, p2_indicator_index, excellent_index, good_index, bad_index, default_index);
 	
 	// -- choose index for background range -- //
+
+	wire [7:0] background_index;
 
 	// calculate the address to draw from 
 	assign background_addr = address; //** pretty sure this will work?
@@ -240,9 +248,9 @@ module index_identifier_background(address, p1_arrow_array, p2_arrow_array, p1_i
 	// calculate address to pull
 	assign image_addr = arrow_pixel_x + arrow_pixel_y*LANE_HEIGHT;
 
-	// now choose which of the image indices to set as your final index - if no arrow present, use background_index
+	// now choose which of the image indices to set as your final index
 	wire [7:0] arrow_range_index0, arrow_range_index1, arrow_range_index2, arrow_range_index3, arrow_range_index4;
-	assign arrow_range_index0 = (arrow_present & in_shake_range) ? shakeyshake_data_index[7:0] : background_index;
+	assign arrow_range_index0 = (arrow_present & in_shake_range) ? shakeyshake_data_index[7:0] : default_index;
 	assign arrow_range_index1 = (arrow_present & in_left_range) ? arrow_left_data_index[7:0] : arrow_range_index0;
 	assign arrow_range_index2 = (arrow_present & in_up_range) ? arrow_up_data_index[7:0] : arrow_range_index1;
 	assign arrow_range_index3 = (arrow_present & in_down_range) ? arrow_down_data_index[7:0] : arrow_range_index2;
@@ -252,6 +260,14 @@ module index_identifier_background(address, p1_arrow_array, p2_arrow_array, p1_i
 	wire arrow_pixel_clear;
 	assign arrow_pixel_clear = arrow_range_index4 == 8'd0;
 	assign arrow_range_index = arrow_pixel_clear ? background_index : arrow_range_index4;
+
+	// -- calculate the static block index if you're in the top 4 states -- // // TODO: LATER choose default if no arrow is present
+	wire [7:0] arrow_block_index, arrow_block_index0, arrow_block_index1, arrow_block_index2, arrow_block_index3;
+	assign arrow_block_index0 = (in_shake_range) ? shakeyshake_index : default_index;
+	assign arrow_block_index1 = (in_left_range) ? left_index : arrow_block_index0;
+	assign arrow_block_index2 = (in_up_range) ? up_index : arrow_block_index1;
+	assign arrow_block_index3 = (in_down_range) ? down_index : arrow_block_index2;
+	assign arrow_block_index = (in_right_range) ? right_index : arrow_block_index3;
 
 	// -- now choose which of the selected indexes to use -- //
 	wire [7:0] index0, index1;
