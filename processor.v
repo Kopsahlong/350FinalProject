@@ -1,14 +1,10 @@
 module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dmem_address, dmem_out, good_bad,
-	index0,  index1,  index2,  index3,  index4,  index5,  index6,  index7,  index8,  index9,
-	index10, index11, index12, index13, index14, index15, index16, index17, index18, index19,
-	index20, index21, index22, index23, index24, index25, index26, index27, index28, index29);
+	screenIndexes);
 
 	input clock, reset, ps2_key_pressed;
 	input [7:0] ps2_out;
 
-	output [3:0] index0,  index1,  index2,  index3,  index4,  index5,  index6,  index7,  index8,  index9;
-	output [3:0] index10, index11, index12, index13, index14, index15, index16, index17, index18, index19;
-	output [3:0] index20, index21, index22, index23, index24, index25, index26, index27, index28, index29;
+	output [77:0] screenIndexes;
 	
 	output [9:0] score;
 	output [1:0] good_bad;
@@ -90,36 +86,9 @@ module processor(clock, reset, ps2_key_pressed, ps2_out, score, dmem_data_in, dm
 		assign stall = lw_isa_MS && (rd_MS_eq_rs_XS || rd_MS_eq_rt_XS || rd_XS_eq_rd_MS);
 
 		wire [31:0] screenIndexReg1, screenIndexReg2, screenIndexReg3;
-		assign  index0 = screenIndexReg1[2:0];
-		assign  index1 = screenIndexReg1[5:3];
-		assign  index2 = screenIndexReg1[8:6];
-		assign  index3 = screenIndexReg1[11:9];
-		assign  index4 = screenIndexReg1[14:12];
-		assign  index5 = screenIndexReg1[17:15];
-		assign  index6 = screenIndexReg1[20:18];
-		assign  index7 = screenIndexReg1[23:21];
-		assign  index8 = screenIndexReg1[26:24];
-		assign  index9 = screenIndexReg1[29:27];
-		assign index10 = screenIndexReg2[2:0];
-		assign index11 = screenIndexReg2[5:3];
-		assign index12 = screenIndexReg2[8:6];
-		assign index13 = screenIndexReg2[11:9];
-		assign index14 = screenIndexReg2[14:12];
-		assign index15 = screenIndexReg2[17:15];
-		assign index16 = screenIndexReg2[20:18];
-		assign index17 = screenIndexReg2[23:21];
-		assign index18 = screenIndexReg2[26:24];
-		assign index19 = screenIndexReg2[29:27];
-		assign index20 = screenIndexReg3[2:0];
-		assign index21 = screenIndexReg3[5:3];
-		assign index22 = screenIndexReg3[8:6];
-		assign index23 = screenIndexReg3[11:9];
-		assign index24 = screenIndexReg3[14:12];
-		assign index25 = screenIndexReg3[17:15];
-		assign index26 = screenIndexReg3[20:18];
-		assign index27 = screenIndexReg3[23:21];
-		assign index28 = screenIndexReg3[26:24];
-		assign index29 = screenIndexReg3[29:27];
+		assign  screenIndexes[29:0] = screenIndexReg1[29:0];
+		assign screenIndexes[59:30] = screenIndexReg2[29:0];
+		assign screenIndexes[77:60] = screenIndexReg3[18:0];
 
 	// - - - (F)ETCH (S)TAGE - - - //
 		instruction_decoder instruction_decoder_FS(.instruction(instruction_FS), .opcode(opcode_FS), .rd(rd_FS), .rs(rs_FS), .rt(rt_FS), .shamt(shamt_FS), .ALU_op(ALU_op_FS), .immediate(immediate_FS), .target(target_FS), .add_isa(add_isa_FS), .addi_isa(addi_isa_FS), .sub_isa(sub_isa_FS), .and_isa(and_isa_FS), .or_isa(or_isa_FS), .sll_isa(sll_isa_FS), .sra_isa(sra_isa_FS), .mul_isa(mul_isa_FS), .div_isa(div_isa_FS), .sw_isa(sw_isa_FS), .lw_isa(lw_isa_FS), .j_isa(j_isa_FS), .bne_isa(bne_isa_FS), .jal_isa(jal_isa_FS), .jr_isa(jr_isa_FS), .blt_isa(blt_isa_FS), .bex_isa(bex_isa_FS), .setx_isa(setx_isa_FS));

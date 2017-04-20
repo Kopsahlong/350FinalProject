@@ -484,6 +484,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
 					"name" : "lcd_data[0]",
 					"strict" : false
 				},
@@ -808,43 +812,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "shakeyShake1In",
+					"strict" : false
+				},
+				{
 					"name" : "resetn",
 					"strict" : false
 				},
 				{
 					"name" : "CLOCK_50",
-					"strict" : false
-				},
-				{
-					"name" : "color_select[0]",
-					"strict" : false
-				},
-				{
-					"name" : "color_select[1]",
-					"strict" : false
-				},
-				{
-					"name" : "color_select[2]",
-					"strict" : false
-				},
-				{
-					"name" : "color_select[3]",
-					"strict" : false
-				},
-				{
-					"name" : "color_select[4]",
-					"strict" : false
-				},
-				{
-					"name" : "color_select[5]",
-					"strict" : false
-				},
-				{
-					"name" : "color_select[6]",
-					"strict" : false
-				},
-				{
-					"name" : "color_select[7]",
 					"strict" : false
 				}
 			]

@@ -77,12 +77,50 @@ and $11, $11, $10 // mask $11 to select lower 3 bits
 or $7, $7, $11 // insert lower 3 bits of $11 into $7
 sll $6, $6, 3 // shift register $6 left 3
 generateRandomNumber: 
-addi $10, $0, 55555 // load in constant a - should be a large number
-addi $11, $0, 46789 // load in constant b - should be a large number, but not large enough to cause an overflow
+addi $10, $0, 33 // load in constant a - should be a large number
+addi $11, $0, 213 // load in constant b - should be a large number, but not large enough to cause an overflow
 mul $12, $4, $10 // multiply previous random number by value a
-add $13, $12, $11 // add value b //TODO fix nick's addi instructions and figure out this algorithm and dmem addressing
-addi $10, $0, 8 // read in mod value // I changed this from addi to lw, is that what you meant? -A
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+add $13, $12, $11 // add value b 
+addi $10, $0, 251 // read in mod value // I changed this from addi to lw, is that what you meant? -A
 div $14, $13, $10  // divide by the mod value
+noop
+noop
+noop
 noop
 noop
 noop
@@ -148,15 +186,21 @@ noop
 noop
 noop
 noop
-sub $4, $13, $11 // subtract out multiplied value to take the real mod --> store in randomNumber
-addi $10, $0, 5 // make check value // I changed this from addi to lw, is that what you meant? -A
-addi $4, $0, 2 //TODO delete <- blt $10, $4, generateRandomNumber // if the value is not within scope, get another one.
+noop
+noop
+noop
+sub $14, $13, $11 // subtract out multiplied value to take the real mod --> store in randomNumber
+sra $4, $14, 1
+addi $10, $0, 6 // make check value 
+addi $11, $0, 7
+and $12, $4, $11
+blt $10, $12, generateRandomNumber // if the value is not within scope, get another one.
 feedNewArrow:
 addi $3, $3, 1 // increment counterSinceLastArrow
 addi $10, $0, numStatesUntilNewArrow // store numStatesUntilNewArrow in temp0
 blt $3, $10, feedNOArrow // if counterSinceLastArrow < numStatesUntilNewArrow, don't feed a new arrow --> feedNOArrow
 add $3, $0, $0 // reset counterSinceLastArrow to 0
-add $6, $6, $4 // add randomNumber from $4 to lower 3 bits of screenIndexReg1 $6
+add $6, $6, $12 // add randomNumber from $4 to lower 3 bits of screenIndexReg1 $6
 j stateWait // done changing state -> jump back to stateWait
 feedNOArrow:
 j stateWait // in0 will be filled with 000 due to sll shifting in 0s
@@ -167,7 +211,7 @@ indexPtr: .word -1056
 arrowInfoPtr: .word -1248
 
 numClockCyclesUntilStateChange: .word 50000
-numStatesUntilNewArrow: .word 5
+numStatesUntilNewArrow: .word 20
 numStates: .word 30
 noKeyInput: .word 7
 
