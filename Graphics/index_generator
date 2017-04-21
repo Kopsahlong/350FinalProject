@@ -1,0 +1,37 @@
+import sys
+from PIL import Image
+
+def create_index_file(outputname):
+
+	# Create a .mif file to write to 
+	f = open(outputname, 'w')
+
+	included_values = ['000000','550055','ff00ff','5500aa','aa00ff','aa00aa','0000ff','aa55aa','5500ff','aa55ff','aaaaff','0000aa','000055','5555ff','5555aa','0055ff','0055aa','00ffff']
+
+	width_string = 'WIDTH = 24;\n'
+	depth_string = 'DEPTH = 256;\n'
+	address_radix_string = 'ADDRESS_RADIX = HEX;\n'
+	data_radix_string = 'DATA_RADIX = HEX;\n'
+
+	f.write(width_string)
+	f.write(depth_string)
+	f.write(address_radix_string)
+	f.write(data_radix_string)
+	f.write('CONTENT BEGIN\n\n')
+
+	address_number = 0
+
+	for value in included_values:
+
+		file_string = ''
+		file_string = '\t' + format(address_number,'03x')+ ' : ' + value[::-1]  + ';\n'
+		f.write(file_string)
+
+		address_number = address_number + 1
+
+	f.write('END')
+	f.close()
+
+if __name__ == '__main__':
+	args = sys.argv
+	create_index_file(args[1])
