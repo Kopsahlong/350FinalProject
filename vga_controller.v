@@ -58,7 +58,7 @@ wire [1:0] p1_indicator, p2_indicator;
 //assign address = 19'd300800;
 
 assign VGA_CLK_n = ~iVGA_CLK;
-index_identifier_background my_index_identifier(.address(ADDR), .p1_arrow_array(player1_indexes), .p2_arrow_array(player2_indexes), .p1_indicator(player1_good_bad), .p2_indicator(player2_good_bad), .clock(VGA_CLK_n), .index(index));
+index_identifier_background_two_matrices my_index_identifier(.address(ADDR), .p1_arrow_array(player1_indexes), .p2_arrow_array(player2_indexes), .p1_indicator(player1_good_bad), .p2_indicator(player2_good_bad), .clock(VGA_CLK_n), .index(index));
 
 //assign index = 8'b01;
 

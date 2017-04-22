@@ -73,9 +73,9 @@ VCCIO8                       : A2        : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
 VCCIO8                       : A5        : power  :                   : 2.5V    : 8         :                
-dmem_data_in_player2[13]     : A6        : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[27]     : A7        : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[20]     : A8        : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[29]     : A6        : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[9]      : A7        : output : 2.5 V             :         : 8         : N              
+dmem_data_out_player2[25]    : A8        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : A9        : power  :                   : 2.5V    : 8         :                
 VGA_B[1]                     : A10       : output : 2.5 V             :         : 8         : Y              
 VGA_B[4]                     : A11       : output : 2.5 V             :         : 8         : Y              
@@ -84,30 +84,30 @@ VCCIO8                       : A13       : power  :                   : 2.5V    
 GND+                         : A14       :        :                   :         : 8         :                
 GND+                         : A15       :        :                   :         : 7         :                
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
-dmem_data_in_player2[28]     : A17       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7         :                
+dmem_address_player2[1]      : A17       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[18]     : A18       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[0]      : A19       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : A20       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A21       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A22       :        :                   :         : 7         :                
+dmem_data_out_player2[9]     : A22       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A23       :        :                   :         : 7         :                
 VCCIO7                       : A24       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A25       :        :                   :         : 7         :                
+dmem_data_out_player2[2]     : A25       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A26       :        :                   :         : 7         :                
 VCCIO7                       : A27       : power  :                   : 2.5V    : 7         :                
 VCCIO2                       : AA1       : power  :                   : 2.5V    : 2         :                
 GND                          : AA2       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA3       :        :                   :         : 2         :                
-dmem_data_out_player2[4]     : AA4       : output : 2.5 V             :         : 2         : N              
+dmem_data_out_player1[13]    : AA3       : output : 2.5 V             :         : 2         : N              
+dmem_data_in_player1[22]     : AA4       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 2         :                
-dmem_data_out_player2[25]    : AA8       : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[8]      : AA7       : output : 2.5 V             :         : 2         : N              
+dmem_address_player1[10]     : AA8       : output : 2.5 V             :         : 3         : N              
 GNDA1                        : AA9       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA10      :        :                   :         : 3         :                
+dmem_address_player1[6]      : AA10      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AA11      : power  :                   : 2.5V    : 3         :                
-dmem_data_in_player1[25]     : AA12      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[1]      : AA13      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[17]     : AA12      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[4]      : AA13      : output : 2.5 V             :         : 3         : N              
 seg8[6]                      : AA14      : output : 2.5 V             :         : 3         : Y              
 seg7[5]                      : AA15      : output : 2.5 V             :         : 4         : Y              
 seg7[2]                      : AA16      : output : 2.5 V             :         : 4         : Y              
@@ -116,27 +116,27 @@ VCCIO4                       : AA18      : power  :                   : 2.5V    
 seg5[1]                      : AA19      : output : 2.5 V             :         : 4         : Y              
 GNDA4                        : AA20      : gnd    :                   :         :           :                
 seg4[3]                      : AA21      : output : 2.5 V             :         : 4         : Y              
-dmem_address_player1[11]     : AA22      : output : 2.5 V             :         : 5         : N              
-dmem_data_out_player1[29]    : AA23      : output : 2.5 V             :         : 5         : N              
-dmem_data_out_player1[0]     : AA24      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA23      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA24      :        :                   :         : 5         :                
 seg3[0]                      : AA25      : output : 2.5 V             :         : 5         : Y              
 seg3[1]                      : AA26      : output : 2.5 V             :         : 5         : Y              
 GND                          : AA27      : gnd    :                   :         :           :                
 VCCIO5                       : AA28      : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB1       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB2       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 2         :                
+dmem_data_out_player1[6]     : AB3       : output : 2.5 V             :         : 2         : N              
+dmem_data_out_player1[11]    : AB4       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB5       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB9       :        :                   :         : 3         :                
-dmem_data_out_player1[23]    : AB10      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :         : 3         :                
-dmem_data_out_player1[31]    : AB12      : output : 2.5 V             :         : 3         : N              
-dmem_data_out_player1[19]    : AB13      : output : 2.5 V             :         : 3         : N              
-dmem_data_out_player1[24]    : AB14      : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[7]      : AB7       : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[29]    : AB8       : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[27]     : AB9       : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[25]    : AB10      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[1]     : AB11      : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[5]      : AB12      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[24]     : AB13      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[21]     : AB14      : output : 2.5 V             :         : 3         : N              
 seg7[4]                      : AB15      : output : 2.5 V             :         : 4         : Y              
 seg7[1]                      : AB16      : output : 2.5 V             :         : 4         : Y              
 seg7[3]                      : AB17      : output : 2.5 V             :         : 4         : Y              
@@ -147,7 +147,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :      
 shakeyShake1In               : AB22      : input  : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB24      :        :                   :         : 5         :                
-dmem_data_out_player1[4]     : AB25      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 5         :                
 color_select[7]              : AB26      : input  : 2.5 V             :         : 5         : Y              
 color_select[4]              : AB27      : input  : 2.5 V             :         : 5         : Y              
 color_select[0]              : AB28      : input  : 2.5 V             :         : 5         : Y              
@@ -157,21 +157,21 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AC3       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC4       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC5       :        :                   :         : 2         :                
 GND                          : AC6       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC7       :        :                   :         : 3         :                
-dmem_data_out_player2[30]    : AC8       : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[10]     : AC7       : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[9]      : AC8       : output : 2.5 V             :         : 3         : N              
 GND                          : AC9       : gnd    :                   :         :           :                
-dmem_data_out_player1[7]     : AC10      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[31]     : AC11      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[27]     : AC12      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[20]    : AC10      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[20]     : AC11      : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[0]      : AC12      : output : 2.5 V             :         : 3         : N              
 GND                          : AC13      : gnd    :                   :         :           :                
-dmem_data_in_player1[12]     : AC14      : output : 2.5 V             :         : 3         : N              
-dmem_data_out_player1[13]    : AC15      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC14      :        :                   :         : 3         :                
+shakeyShake2In               : AC15      : input  : 2.5 V             :         : 4         : Y              
 GND                          : AC16      : gnd    :                   :         :           :                
 seg7[6]                      : AC17      : output : 2.5 V             :         : 4         : Y              
 seg6[1]                      : AC18      : output : 2.5 V             :         : 4         : Y              
-dmem_data_in_player1[23]     : AC19      : output : 2.5 V             :         : 4         : N              
+dmem_data_out_player2[17]    : AC19      : output : 2.5 V             :         : 4         : N              
 GND                          : AC20      : gnd    :                   :         :           :                
-dmem_data_out_player1[17]    : AC21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC21      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4         :                
 GND                          : AC23      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC24      :        :                   :         : 5         :                
@@ -179,102 +179,102 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :      
 color_select[5]              : AC26      : input  : 2.5 V             :         : 5         : Y              
 color_select[2]              : AC27      : input  : 2.5 V             :         : 5         : Y              
 color_select[1]              : AC28      : input  : 2.5 V             :         : 5         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD1       :        :                   :         : 2         :                
+dmem_data_in_player1[7]      : AD1       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD2       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD3       :        :                   :         : 2         :                
+dmem_data_out_player1[12]    : AD3       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD4       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD5       :        :                   :         : 3         :                
+dmem_data_out_player2[22]    : AD5       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD6       : power  :                   : 2.5V    : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD8       :        :                   :         : 3         :                
+dmem_data_in_player1[9]      : AD8       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD9       : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD10      :        :                   :         : 3         :                
-dmem_data_out_player1[15]    : AD11      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[30]     : AD12      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[27]    : AD10      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[14]     : AD11      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[21]    : AD12      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
-dmem_data_in_player1[7]      : AD14      : output : 2.5 V             :         : 3         : N              
-dmem_data_out_player1[27]    : AD15      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD14      :        :                   :         : 3         :                
+dmem_data_in_player1[23]     : AD15      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
 seg8[0]                      : AD17      : output : 2.5 V             :         : 4         : Y              
 seg6[0]                      : AD18      : output : 2.5 V             :         : 4         : Y              
-dmem_address_player1[9]      : AD19      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4         :                
 VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
-dmem_data_in_player1[8]      : AD21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD22      :        :                   :         : 4         :                
 VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
 seg4[4]                      : AD24      : output : 2.5 V             :         : 4         : Y              
-dmem_data_out_player1[8]     : AD25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD25      :        :                   :         : 4         :                
 color_select[6]              : AD26      : input  : 2.5 V             :         : 5         : Y              
 color_select[3]              : AD27      : input  : 2.5 V             :         : 5         : Y              
-dmem_data_out_player1[14]    : AD28      : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE1       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE2       :        :                   :         : 2         :                
-dmem_data_out_player2[19]    : AE3       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD28      :        :                   :         : 5         :                
+dmem_data_in_player1[1]      : AE1       : output : 2.5 V             :         : 2         : N              
+dmem_data_out_player1[23]    : AE2       : output : 2.5 V             :         : 2         : N              
+dmem_data_out_player1[10]    : AE3       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE4       :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE5       :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE6       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE8       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE9       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE10      :        :                   :         : 3         :                
-dmem_data_in_player1[17]     : AE11      : output : 2.5 V             :         : 3         : N              
-dmem_data_out_player1[10]    : AE12      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[13]     : AE13      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[9]      : AE14      : output : 2.5 V             :         : 3         : N              
-dmem_data_out_player1[30]    : AE15      : output : 2.5 V             :         : 4         : N              
-dmem_address_player1[1]      : AE16      : output : 2.5 V             :         : 4         : N              
+dmem_address_player1[3]      : AE7       : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[17]    : AE8       : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[15]    : AE9       : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[31]     : AE10      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[5]     : AE11      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[30]    : AE12      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[2]     : AE13      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[2]      : AE14      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[16]    : AE15      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE16      :        :                   :         : 4         :                
 seg8[1]                      : AE17      : output : 2.5 V             :         : 4         : Y              
 seg5[6]                      : AE18      : output : 2.5 V             :         : 4         : Y              
 seg5[4]                      : AE19      : output : 2.5 V             :         : 4         : Y              
-dmem_data_out_player1[3]     : AE20      : output : 2.5 V             :         : 4         : N              
-dmem_data_in_player1[22]     : AE21      : output : 2.5 V             :         : 4         : N              
-dmem_data_out_player1[5]     : AE22      : output : 2.5 V             :         : 4         : N              
-dmem_data_out_player1[18]    : AE23      : output : 2.5 V             :         : 4         : N              
-dmem_data_out_player1[2]     : AE24      : output : 2.5 V             :         : 4         : N              
-dmem_address_player1[0]      : AE25      : output : 2.5 V             :         : 4         : N              
-dmem_address_player1[10]     : AE26      : output : 2.5 V             :         : 5         : N              
-dmem_data_in_player1[29]     : AE27      : output : 2.5 V             :         : 5         : N              
-dmem_data_in_player1[3]      : AE28      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE20      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE21      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE24      :        :                   :         : 4         :                
+dmem_data_out_player2[3]     : AE25      : output : 2.5 V             :         : 4         : N              
+dmem_data_out_player2[0]     : AE26      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 5         :                
 GND                          : AF1       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF2       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF3       :        :                   :         : 3         :                
-dmem_data_out_player2[10]    : AF4       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF5       :        :                   :         : 3         :                
+dmem_data_in_player1[11]     : AF2       : output : 2.5 V             :         : 2         : N              
+dmem_data_in_player1[26]     : AF3       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF4       :        :                   :         : 3         :                
+dmem_data_out_player1[9]     : AF5       : output : 2.5 V             :         : 3         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF6       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF8       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF9       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF10      :        :                   :         : 3         :                
-dmem_data_out_player1[12]    : AF11      : output : 2.5 V             :         : 3         : N              
-dmem_data_out_player1[1]     : AF12      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[11]     : AF13      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[19]     : AF14      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[6]      : AF15      : output : 2.5 V             :         : 4         : N              
-dmem_data_out_player1[26]    : AF16      : output : 2.5 V             :         : 4         : N              
+dmem_data_out_player1[28]    : AF7       : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[24]    : AF8       : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[1]      : AF9       : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[0]     : AF10      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[4]     : AF11      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[31]    : AF12      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[5]      : AF13      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[14]    : AF14      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[16]     : AF15      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF16      :        :                   :         : 4         :                
 seg8[4]                      : AF17      : output : 2.5 V             :         : 4         : Y              
 seg6[5]                      : AF18      : output : 2.5 V             :         : 4         : Y              
 seg5[5]                      : AF19      : output : 2.5 V             :         : 4         : Y              
-dmem_data_in_player1[28]     : AF20      : output : 2.5 V             :         : 4         : N              
-dmem_data_out_player1[25]    : AF21      : output : 2.5 V             :         : 4         : N              
-dmem_data_out_player1[22]    : AF22      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF20      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF22      :        :                   :         : 4         :                
 seg4[5]                      : AF23      : output : 2.5 V             :         : 4         : Y              
-dmem_address_player1[7]      : AF24      : output : 2.5 V             :         : 4         : N              
-dmem_data_in_player1[15]     : AF25      : output : 2.5 V             :         : 4         : N              
-dmem_address_player1[4]      : AF26      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF24      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF25      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF26      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF27      :        :                   :         : 5         :                
 GND                          : AF28      : gnd    :                   :         :           :                
 VCCIO2                       : AG1       : power  :                   : 2.5V    : 2         :                
 GND                          : AG2       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG3       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG4       :        :                   :         : 3         :                
+dmem_data_out_player1[26]    : AG4       : output : 2.5 V             :         : 3         : N              
 GND                          : AG5       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG6       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG7       :        :                   :         : 3         :                
-dmem_data_out_player2[27]    : AG8       : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[28]     : AG6       : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[2]      : AG7       : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[8]      : AG8       : output : 2.5 V             :         : 3         : N              
 GND                          : AG9       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG10      :        :                   :         : 3         :                
-dmem_data_in_player1[10]     : AG11      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[0]      : AG12      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player1[3]     : AG10      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[25]     : AG11      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG12      :        :                   :         : 3         :                
 GND                          : AG13      : gnd    :                   :         :           :                
 GND+                         : AG14      :        :                   :         : 3         :                
 GND+                         : AG15      :        :                   :         : 4         :                
@@ -284,24 +284,24 @@ seg8[5]                      : AG18      : output : 2.5 V             :         
 seg6[4]                      : AG19      : output : 2.5 V             :         : 4         : Y              
 GND                          : AG20      : gnd    :                   :         :           :                
 seg5[2]                      : AG21      : output : 2.5 V             :         : 4         : Y              
-dmem_address_player1[5]      : AG22      : output : 2.5 V             :         : 4         : N              
-dmem_address_player1[3]      : AG23      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG22      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4         :                
 GND                          : AG24      : gnd    :                   :         :           :                
-dmem_data_in_player1[24]     : AG25      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4         :                
+dmem_data_out_player2[16]    : AG26      : output : 2.5 V             :         : 4         : N              
 GND                          : AG27      : gnd    :                   :         :           :                
 VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
 VCCIO3                       : AH2       : power  :                   : 2.5V    : 3         :                
-dmem_data_out_player2[18]    : AH3       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH4       :        :                   :         : 3         :                
+dmem_data_out_player1[8]     : AH3       : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[29]     : AH4       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH5       : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH6       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 3         :                
+dmem_data_in_player1[6]      : AH6       : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[4]      : AH7       : output : 2.5 V             :         : 3         : N              
+dmem_address_player1[11]     : AH8       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH9       : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH10      :        :                   :         : 3         :                
-dmem_data_out_player1[11]    : AH11      : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[2]      : AH12      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[30]     : AH10      : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[15]     : AH11      : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player2[14]    : AH12      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH13      : power  :                   : 2.5V    : 3         :                
 GND+                         : AH14      :        :                   :         : 3         :                
 GND+                         : AH15      :        :                   :         : 4         :                
@@ -311,19 +311,19 @@ seg6[6]                      : AH18      : output : 2.5 V             :         
 seg6[3]                      : AH19      : output : 2.5 V             :         : 4         : Y              
 VCCIO4                       : AH20      : power  :                   : 2.5V    : 4         :                
 seg5[3]                      : AH21      : output : 2.5 V             :         : 4         : Y              
-dmem_address_player1[2]      : AH22      : output : 2.5 V             :         : 4         : N              
-dmem_address_player1[6]      : AH23      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH22      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH23      :        :                   :         : 4         :                
 VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
-dmem_address_player1[8]      : AH25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH25      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH26      :        :                   :         : 4         :                
 VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
 VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
+dmem_data_out_player2[8]     : B4        : output : 2.5 V             :         : 8         : N              
 GND                          : B5        : gnd    :                   :         :           :                
-dmem_data_in_player2[7]      : B6        : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[25]     : B7        : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[28]     : B6        : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[14]     : B7        : output : 2.5 V             :         : 8         : N              
 VGA_G[5]                     : B8        : output : 2.5 V             :         : 8         : Y              
 GND                          : B9        : gnd    :                   :         :           :                
 VGA_B[0]                     : B10       : output : 2.5 V             :         : 8         : Y              
@@ -333,9 +333,9 @@ GND                          : B13       : gnd    :                   :         
 GND+                         : B14       :        :                   :         : 8         :                
 GND+                         : B15       :        :                   :         : 7         :                
 GND                          : B16       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B17       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B18       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :         : 7         :                
+dmem_address_player2[8]      : B17       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[19]     : B18       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[20]     : B19       : output : 2.5 V             :         : 7         : N              
 GND                          : B20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :         : 7         :                
@@ -347,79 +347,79 @@ GND                          : B27       : gnd    :                   :         
 VCCIO6                       : B28       : power  :                   : 2.5V    : 6         :                
 GND                          : C1        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
-dmem_data_out_player2[29]    : C3        : output : 2.5 V             :         : 8         : N              
-dmem_data_out_player2[14]    : C4        : output : 2.5 V             :         : 8         : N              
-dmem_data_out_player2[15]    : C5        : output : 2.5 V             :         : 8         : N              
+dmem_data_out_player2[24]    : C3        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C4        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
-dmem_data_in_player2[5]      : C7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 8         :                
 VGA_G[4]                     : C8        : output : 2.5 V             :         : 8         : Y              
 VGA_G[7]                     : C9        : output : 2.5 V             :         : 8         : Y              
 VGA_SYNC                     : C10       : output : 2.5 V             :         : 8         : Y              
 VGA_B[2]                     : C11       : output : 2.5 V             :         : 8         : Y              
 VGA_B[5]                     : C12       : output : 2.5 V             :         : 8         : Y              
 VGA_VS                       : C13       : output : 2.5 V             :         : 8         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C18       :        :                   :         : 7         :                
-dmem_data_out_player2[6]     : C19       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 7         :                
+dmem_data_in_player2[13]     : C14       : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[6]      : C15       : output : 2.5 V             :         : 7         : N              
+dmem_address_player2[2]      : C16       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[24]     : C17       : output : 2.5 V             :         : 7         : N              
+dmem_data_out_player2[23]    : C18       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[22]     : C19       : output : 2.5 V             :         : 7         : N              
+dmem_data_out_player2[18]    : C20       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C21       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C22       :        :                   :         : 7         :                
-dmem_data_out_player2[24]    : C23       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C23       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C24       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C25       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C26       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C27       :        :                   :         : 6         :                
 GND                          : C28       : gnd    :                   :         :           :                
-dmem_data_out_player2[23]    : D1        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 1         :                
 GND                          : D3        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :         : 8         :                
-dmem_data_out_player2[21]    : D5        : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[16]     : D6        : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[23]     : D7        : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[21]     : D8        : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[10]     : D9        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8         :                
 VGA_R[2]                     : D10       : output : 2.5 V             :         : 8         : Y              
 VGA_B[6]                     : D11       : output : 2.5 V             :         : 8         : Y              
 VGA_B[7]                     : D12       : output : 2.5 V             :         : 8         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D16       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7         :                
-dmem_data_out_player2[9]     : D18       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 7         :                
+dmem_data_in_player2[5]      : D13       : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[15]     : D14       : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[4]      : D15       : output : 2.5 V             :         : 7         : N              
+dmem_address_player2[3]      : D16       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[25]     : D17       : output : 2.5 V             :         : 7         : N              
+dmem_data_out_player2[29]    : D18       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[23]     : D19       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D20       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 7         :                
-dmem_data_out_player2[7]     : D22       : output : 2.5 V             :         : 7         : N              
-dmem_data_out_player2[22]    : D23       : output : 2.5 V             :         : 7         : N              
-dmem_data_out_player2[0]     : D24       : output : 2.5 V             :         : 7         : N              
+dmem_data_out_player2[31]    : D22       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D23       :        :                   :         : 7         :                
+dmem_data_out_player2[26]    : D24       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D25       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D26       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D27       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D28       :        :                   :         : 6         :                
-dmem_address_player2[2]      : E1        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E1        :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 8         :                
 VCCIO8                       : E6        : power  :                   : 2.5V    : 8         :                
-dmem_data_out_player2[17]    : E7        : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[17]     : E8        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
 VCCIO8                       : E9        : power  :                   : 2.5V    : 8         :                
-dmem_data_in_player2[4]      : E10       : output : 2.5 V             :         : 8         : N              
+dmem_data_out_player2[4]     : E10       : output : 2.5 V             :         : 8         : N              
 VGA_R[1]                     : E11       : output : 2.5 V             :         : 8         : Y              
 VGA_R[0]                     : E12       : output : 2.5 V             :         : 8         : Y              
 VCCIO8                       : E13       : power  :                   : 2.5V    : 8         :                
-dmem_data_in_player2[30]     : E14       : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 7         :                
+dmem_address_player2[6]      : E14       : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[7]      : E15       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : E16       : power  :                   : 2.5V    : 7         :                
 seg1[2]                      : E17       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E18       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E19       :        :                   :         : 7         :                
+dmem_data_out_player2[10]    : E19       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : E20       : power  :                   : 2.5V    : 7         :                
 leds[0]                      : E21       : output : 2.5 V             :         : 7         : Y              
 leds[1]                      : E22       : output : 2.5 V             :         : 7         : Y              
@@ -428,28 +428,28 @@ leds[3]                      : E24       : output : 2.5 V             :         
 leds[2]                      : E25       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E26       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E27       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E28       :        :                   :         : 6         :                
-dmem_address_player2[4]      : F1        : output : 2.5 V             :         : 1         : N              
-dmem_address_player2[9]      : F2        : output : 2.5 V             :         : 1         : N              
+dmem_data_out_player2[27]    : E28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1         :                
 GND                          : F6        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8         :                
+dmem_data_out_player2[13]    : F7        : output : 2.5 V             :         : 8         : N              
 VGA_G[2]                     : F8        : output : 2.5 V             :         : 8         : Y              
 GND                          : F9        : gnd    :                   :         :           :                
 VGA_G[6]                     : F10       : output : 2.5 V             :         : 8         : Y              
 VGA_BLANK                    : F11       : output : 2.5 V             :         : 8         : Y              
 VGA_R[3]                     : F12       : output : 2.5 V             :         : 8         : Y              
 GND                          : F13       : gnd    :                   :         :           :                
-dmem_data_in_player2[1]      : F14       : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[19]     : F15       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[10]     : F14       : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[8]      : F15       : output : 2.5 V             :         : 7         : N              
 GND                          : F16       : gnd    :                   :         :           :                
-dmem_data_out_player2[2]     : F17       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[30]     : F17       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F18       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F19       :        :                   :         : 7         :                
 GND                          : F20       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 7         :                
+dmem_data_out_player2[12]    : F21       : output : 2.5 V             :         : 7         : N              
 seg1[1]                      : F22       : output : 2.5 V             :         : 7         : Y              
 GND                          : F23       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F24       :        :                   :         : 6         :                
@@ -457,38 +457,38 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F25       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : F26       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F27       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F28       :        :                   :         : 6         :                
-dmem_address_player2[8]      : G1        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 1         :                
 ps2_clock                    : G6        : bidir  : 2.5 V             :         : 1         : Y              
-dmem_data_in_player2[9]      : G7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 8         :                
 VGA_G[0]                     : G8        : output : 2.5 V             :         : 8         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :         : 8         :                
+dmem_data_out_player2[30]    : G9        : output : 2.5 V             :         : 8         : N              
 VGA_R[4]                     : G10       : output : 2.5 V             :         : 8         : Y              
 VGA_G[1]                     : G11       : output : 2.5 V             :         : 8         : Y              
-dmem_data_in_player2[26]     : G12       : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[3]      : G12       : output : 2.5 V             :         : 8         : N              
 VGA_HS                       : G13       : output : 2.5 V             :         : 8         : Y              
-dmem_data_in_player2[31]     : G14       : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 7         :                
+dmem_data_in_player2[21]     : G14       : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[31]     : G15       : output : 2.5 V             :         : 7         : N              
+dmem_address_player2[10]     : G16       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[17]     : G17       : output : 2.5 V             :         : 7         : N              
 seg1[0]                      : G18       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G19       :        :                   :         : 7         :                
+dmem_data_in_player2[27]     : G19       : output : 2.5 V             :         : 7         : N              
 leds[5]                      : G20       : output : 2.5 V             :         : 7         : Y              
 leds[7]                      : G21       : output : 2.5 V             :         : 7         : Y              
 leds[6]                      : G22       : output : 2.5 V             :         : 7         : Y              
-dmem_data_out_player2[11]    : G23       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G23       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G24       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G25       :        :                   :         : 6         :                
+dmem_data_out_player2[28]    : G25       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G26       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G27       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G28       :        :                   :         : 6         :                
 VCCIO1                       : H1        : power  :                   : 2.5V    : 1         :                
 GND                          : H2        : gnd    :                   :         :           :                
-dmem_address_player2[6]      : H3        : output : 2.5 V             :         : 1         : N              
-dmem_address_player2[7]      : H4        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1         :                
+dmem_data_out_player2[7]     : H4        : output : 2.5 V             :         : 1         : N              
 ps2_data                     : H5        : bidir  : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H6        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 1         :                
@@ -497,17 +497,17 @@ GNDA3                        : H9        : gnd    :                   :         
 VGA_R[7]                     : H10       : output : 2.5 V             :         : 8         : Y              
 VCCIO8                       : H11       : power  :                   : 2.5V    : 8         :                
 VGA_G[3]                     : H12       : output : 2.5 V             :         : 8         : Y              
-dmem_data_in_player2[18]     : H13       : output : 2.5 V             :         : 8         : N              
-dmem_data_in_player2[11]     : H14       : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H17       :        :                   :         : 7         :                
+dmem_address_player2[7]      : H13       : output : 2.5 V             :         : 8         : N              
+dmem_data_in_player2[2]      : H14       : output : 2.5 V             :         : 8         : N              
+dmem_address_player2[0]      : H15       : output : 2.5 V             :         : 7         : N              
+dmem_address_player2[11]     : H16       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[16]     : H17       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : H18       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H19       :        :                   :         : 7         :                
+dmem_data_in_player2[1]      : H19       : output : 2.5 V             :         : 7         : N              
 GNDA2                        : H20       : gnd    :                   :         :           :                
 leds[4]                      : H21       : output : 2.5 V             :         : 7         : Y              
 seg1[6]                      : H22       : output : 2.5 V             :         : 6         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H23       :        :                   :         : 6         :                
+dmem_data_out_player2[15]    : H23       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H24       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H25       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H26       :        :                   :         : 6         :                
@@ -515,23 +515,23 @@ GND                          : H27       : gnd    :                   :         
 VCCIO6                       : H28       : power  :                   : 2.5V    : 6         :                
 GND+                         : J1        :        :                   :         : 1         :                
 GND                          : J2        : gnd    :                   :         :           :                
-dmem_address_player2[0]      : J3        : output : 2.5 V             :         : 1         : N              
-dmem_address_player2[5]      : J4        : output : 2.5 V             :         : 1         : N              
-dmem_data_out_player2[31]    : J5        : output : 2.5 V             :         : 1         : N              
-dmem_data_in_player2[6]      : J6        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J5        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J6        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J7        :        :                   :         : 1         :                
 VCCA3                        : J8        : power  :                   : 2.5V    :           :                
 VCCD_PLL3                    : J9        : power  :                   : 1.2V    :           :                
-dmem_data_in_player2[0]      : J10       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J10       :        :                   :         : 8         :                
 GND                          : J11       : gnd    :                   :         :           :                
 VGA_R[5]                     : J12       : output : 2.5 V             :         : 8         : Y              
-dmem_data_in_player2[29]     : J13       : output : 2.5 V             :         : 8         : N              
+dmem_address_player2[5]      : J13       : output : 2.5 V             :         : 8         : N              
 dmem_data_in_player2[12]     : J14       : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 7         :                
-dmem_data_out_player2[5]     : J17       : output : 2.5 V             :         : 7         : N              
+dmem_address_player2[4]      : J15       : output : 2.5 V             :         : 7         : N              
+dmem_address_player2[9]      : J16       : output : 2.5 V             :         : 7         : N              
+dmem_data_in_player2[26]     : J17       : output : 2.5 V             :         : 7         : N              
 GND                          : J18       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J19       :        :                   :         : 7         :                
+dmem_data_in_player2[11]     : J19       : output : 2.5 V             :         : 7         : N              
 VCCD_PLL2                    : J20       : power  :                   : 1.2V    :           :                
 VCCA2                        : J21       : power  :                   : 2.5V    :           :                
 seg1[5]                      : J22       : output : 2.5 V             :         : 6         : Y              
@@ -543,12 +543,12 @@ GND+                         : J27       :        :                   :         
 GND+                         : J28       :        :                   :         : 6         :                
 lcd_data[4]                  : K1        : output : 2.5 V             :         : 1         : Y              
 lcd_data[5]                  : K2        : output : 2.5 V             :         : 1         : Y              
-dmem_data_out_player2[12]    : K3        : output : 2.5 V             :         : 1         : N              
-dmem_address_player2[1]      : K4        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K4        :        :                   :         : 1         :                
 VCCIO1                       : K5        : power  :                   : 2.5V    : 1         :                
 GND                          : K6        : gnd    :                   :         :           :                
 lcd_data[3]                  : K7        : output : 2.5 V             :         : 1         : Y              
-dmem_data_in_player2[15]     : K8        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 1         :                
 VCCINT                       : K9        : power  :                   : 1.2V    :           :                
 GND                          : K10       : gnd    :                   :         :           :                
 VCCINT                       : K11       : power  :                   : 1.2V    :           :                
@@ -575,8 +575,8 @@ lcd_data[0]                  : L3        : output : 2.5 V             :         
 lcd_en                       : L4        : output : 2.5 V             :         : 1         : Y              
 lcd_on                       : L5        : output : 2.5 V             :         : 1         : Y              
 lcd_blon                     : L6        : output : 2.5 V             :         : 1         : Y              
-dmem_data_in_player2[22]     : L7        : output : 2.5 V             :         : 1         : N              
-dmem_data_in_player2[14]     : L8        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L7        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 1         :                
 GND                          : L9        : gnd    :                   :         :           :                
 VCCINT                       : L10       : power  :                   : 1.2V    :           :                
 GND                          : L11       : gnd    :                   :         :           :                
@@ -595,15 +595,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : L23       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : L24       :        :                   :         : 6         :                
 seg1[4]                      : L25       : output : 2.5 V             :         : 6         : Y              
 seg1[3]                      : L26       : output : 2.5 V             :         : 6         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : L27       :        :                   :         : 6         :                
-dmem_data_out_player2[1]     : L28       : output : 2.5 V             :         : 6         : N              
+dmem_data_out_player2[1]     : L27       : output : 2.5 V             :         : 6         : N              
+dmem_data_out_player2[21]    : L28       : output : 2.5 V             :         : 6         : N              
 lcd_rw                       : M1        : output : 2.5 V             :         : 1         : Y              
 lcd_rs                       : M2        : output : 2.5 V             :         : 1         : Y              
 lcd_data[6]                  : M3        : output : 2.5 V             :         : 1         : Y              
-dmem_address_player2[10]     : M4        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M4        :        :                   :         : 1         :                
 lcd_data[7]                  : M5        : output : 2.5 V             :         : 1         : Y              
 nSTATUS                      : M6        :        :                   :         : 1         :                
-dmem_data_in_player2[3]      : M7        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M7        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 1         :                
 VCCINT                       : M9        : power  :                   : 1.2V    :           :                
 GND                          : M10       : gnd    :                   :         :           :                
@@ -632,7 +632,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : N4        :        :                   :      
 VCCIO1                       : N5        : power  :                   : 2.5V    : 1         :                
 GND                          : N6        : gnd    :                   :         :           :                
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : N7        : input  : 2.5 V             :         : 1         : N              
-dmem_address_player2[11]     : N8        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 1         :                
 GND                          : N9        : gnd    :                   :         :           :                
 VCCINT                       : N10       : power  :                   : 1.2V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
@@ -653,8 +653,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : N25       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : N26       :        :                   :         : 6         :                
 GND                          : N27       : gnd    :                   :         :           :                
 VCCIO6                       : N28       : power  :                   : 2.5V    : 6         :                
-dmem_address_player2[3]      : P1        : output : 2.5 V             :         : 1         : N              
-dmem_data_in_player2[8]      : P2        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P2        :        :                   :         : 1         :                
 ~ALTERA_DCLK~                : P3        : output : 2.5 V             :         : 1         : N              
 nCONFIG                      : P4        :        :                   :         : 1         :                
 TCK                          : P5        : input  :                   :         : 1         :                
@@ -682,10 +682,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : P26       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : P27       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : P28       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
-dmem_data_out_player2[16]    : R2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 2         :                
-dmem_data_in_player2[24]     : R5        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 2         :                
 nCE                          : R8        :        :                   :         : 1         :                
@@ -706,7 +706,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R22       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R23       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R24       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R25       :        :                   :         : 5         :                
-dmem_data_out_player1[21]    : R26       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R26       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R27       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R28       :        :                   :         : 5         :                
 VCCIO2                       : T1        : power  :                   : 2.5V    : 2         :                
@@ -716,7 +716,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :      
 VCCIO2                       : T5        : power  :                   : 2.5V    : 2         :                
 GND                          : T6        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 2         :                
+dmem_data_out_player1[22]    : T8        : output : 2.5 V             :         : 2         : N              
 VCCINT                       : T9        : power  :                   : 1.2V    :           :                
 GND                          : T10       : gnd    :                   :         :           :                
 VCCINT                       : T11       : power  :                   : 1.2V    :           :                
@@ -730,21 +730,21 @@ GND                          : T18       : gnd    :                   :         
 VCCINT                       : T19       : power  :                   : 1.2V    :           :                
 GND                          : T20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T21       :        :                   :         : 5         :                
-dmem_data_out_player1[20]    : T22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5         :                
 GND                          : T23       : gnd    :                   :         :           :                
 VCCIO5                       : T24       : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T25       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T26       :        :                   :         : 5         :                
+dmem_data_out_player2[20]    : T26       : output : 2.5 V             :         : 5         : N              
 GND                          : T27       : gnd    :                   :         :           :                
 VCCIO5                       : T28       : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2         :                
-dmem_data_in_player2[2]      : U3        : output : 2.5 V             :         : 2         : N              
-dmem_data_out_player2[26]    : U4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U5        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :         : 2         :                
+dmem_data_in_player1[13]     : U7        : output : 2.5 V             :         : 2         : N              
+dmem_data_in_player1[12]     : U8        : output : 2.5 V             :         : 2         : N              
 GND                          : U9        : gnd    :                   :         :           :                
 VCCINT                       : U10       : power  :                   : 1.2V    :           :                
 GND                          : U11       : gnd    :                   :         :           :                
@@ -758,21 +758,21 @@ VCCINT                       : U18       : power  :                   : 1.2V    
 GND                          : U19       : gnd    :                   :         :           :                
 VCCINT                       : U20       : power  :                   : 1.2V    :           :                
 seg4[1]                      : U21       : output : 2.5 V             :         : 5         : Y              
-dmem_data_out_player1[9]     : U22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U22       :        :                   :         : 5         :                
 seg2[5]                      : U23       : output : 2.5 V             :         : 5         : Y              
 seg2[6]                      : U24       : output : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U25       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U26       :        :                   :         : 5         :                
-dmem_data_out_player1[16]    : U27       : output : 2.5 V             :         : 5         : N              
-dmem_data_in_player1[21]     : U28       : output : 2.5 V             :         : 5         : N              
-dmem_data_out_player2[3]     : V1        : output : 2.5 V             :         : 2         : N              
+dmem_data_out_player2[6]     : U27       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U28       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 2         :                
-dmem_data_out_player2[13]    : V8        : output : 2.5 V             :         : 2         : N              
+dmem_data_in_player1[19]     : V5        : output : 2.5 V             :         : 2         : N              
+dmem_data_in_player1[18]     : V6        : output : 2.5 V             :         : 2         : N              
+dmem_data_out_player1[7]     : V7        : output : 2.5 V             :         : 2         : N              
+dmem_data_out_player1[19]    : V8        : output : 2.5 V             :         : 2         : N              
 VCCINT                       : V9        : power  :                   : 1.2V    :           :                
 GND                          : V10       : gnd    :                   :         :           :                
 VCCINT                       : V11       : power  :                   : 1.2V    :           :                
@@ -787,16 +787,16 @@ VCCINT                       : V19       : power  :                   : 1.2V    
 GND                          : V20       : gnd    :                   :         :           :                
 seg4[0]                      : V21       : output : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V22       :        :                   :         : 5         :                
-dmem_data_in_player1[16]     : V23       : output : 2.5 V             :         : 5         : N              
-dmem_data_in_player1[18]     : V24       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V23       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V24       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V25       :        :                   :         : 5         :                
-dmem_data_in_player1[20]     : V26       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V26       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V27       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V28       :        :                   :         : 5         :                
-dmem_data_out_player2[28]    : W1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 2         :                
-dmem_data_out_player2[8]     : W3        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 2         :                
+dmem_data_out_player1[18]    : W4        : output : 2.5 V             :         : 2         : N              
 VCCIO2                       : W5        : power  :                   : 2.5V    : 2         :                
 GND                          : W6        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W7        :        :                   :         : 2         :                
@@ -821,30 +821,30 @@ seg2[4]                      : W25       : output : 2.5 V             :         
 seg3[3]                      : W26       : output : 2.5 V             :         : 5         : Y              
 seg3[5]                      : W27       : output : 2.5 V             :         : 5         : Y              
 seg3[6]                      : W28       : output : 2.5 V             :         : 5         : Y              
-shakeyShake2In               : Y1        : input  : 2.5 V             :         : 2         : N              
+GND+                         : Y1        :        :                   :         : 2         :                
 CLOCK_50                     : Y2        : input  : 2.5 V             :         : 2         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 2         :                
-dmem_data_out_player2[20]    : Y6        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 2         :                
 VCCA1                        : Y8        : power  :                   : 2.5V    :           :                
 VCCD_PLL1                    : Y9        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y10       :        :                   :         : 3         :                
+dmem_data_out_player2[11]    : Y10       : output : 2.5 V             :         : 3         : N              
 GND                          : Y11       : gnd    :                   :         :           :                
-dmem_data_out_player1[28]    : Y12       : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[14]     : Y13       : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[26]     : Y14       : output : 2.5 V             :         : 3         : N              
-dmem_data_out_player1[6]     : Y15       : output : 2.5 V             :         : 3         : N              
-dmem_data_in_player1[4]      : Y16       : output : 2.5 V             :         : 4         : N              
-dmem_data_in_player1[5]      : Y17       : output : 2.5 V             :         : 4         : N              
+dmem_data_in_player1[0]      : Y12       : output : 2.5 V             :         : 3         : N              
+dmem_data_in_player1[3]      : Y13       : output : 2.5 V             :         : 3         : N              
+dmem_data_out_player2[19]    : Y14       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y15       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y17       :        :                   :         : 4         :                
 GND                          : Y18       : gnd    :                   :         :           :                
 seg4[6]                      : Y19       : output : 2.5 V             :         : 4         : Y              
 VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
 VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
 seg2[1]                      : Y22       : output : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y23       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y24       :        :                   :         : 5         :                
+dmem_data_out_player2[5]     : Y24       : output : 2.5 V             :         : 5         : N              
 seg3[2]                      : Y25       : output : 2.5 V             :         : 5         : Y              
 seg3[4]                      : Y26       : output : 2.5 V             :         : 5         : Y              
 GND+                         : Y27       :        :                   :         : 5         :                

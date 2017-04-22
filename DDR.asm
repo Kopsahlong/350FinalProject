@@ -1,7 +1,7 @@
 .text
 main:
 addi $1, $0, 0 // reset clockCycle to 0
-addi $2, $0, noKeyInput // reset lastKeyInput to noKeyInput
+addi $2, $0, 7 // reset lastKeyInput to noKeyInput
 addi $3, $0, 0 // reset counterSinceLastArrow to 0
 addi $4, $0, 0 // reset randomNumber to 0
 addi $5, $0, 0 // reset score to 0
@@ -13,30 +13,40 @@ addi $9, $0, 0 // reset goodBad to 0
 
 stateWait:
 addi $1, $1, 1 // increment clockCycle by 1, count to numClockCyclesUntilStateChange
-addi $10, $0, numClockCyclesUntilStateChange
-sll $10, $10, 20
+addi $10, $0, 50000
+addi $10, $10, 50000
 blt $10, $1, stateChange // branch if clockCycle>numClockCyclesUntilStateChange -> stateChange
-addi $10, $0, noKeyInput 
+addi $10, $0, 7 
 bne $2, $10, keyPressed //branch if lastKeyInput != noKeyInput -> keyPressed
 j stateWait
 
 
 keyPressed:
 addi $10, $0, 7 // temp $10 to be used as a mask to select least significant 3 bits
-sra $20, $8, 18
+sra $20, $8, 3
 and $20, $20, $10 // store 3 bit goodIndex1 value in $20
-sra $21, $8, 15
-and $21, $21, $10 // store 3 bit excellentIndex value in $21
+sra $21, $8, 6
+and $21, $21, $10 // store 3 bit goodIndex2 value in $21
 sra $22, $8, 12
-and $22, $22, $10 // store 3 bit goodIndex2 value in $22
+and $22, $22, $10 // store 3 bit goodIndex3 value in $22
+sra $23, $8, 15
+and $23, $23, $10 // store 3 bit goodIndex4 value in $23
+sra $24, $8, 9
+and $24, $24, $10 // store 3 bit goodIndex4 value in $24
 checkIfExcellent:
-bne $21, $2, checkIfGood1 // if lastKeyInput != arrowInfo from excellentIndex --> check good1
+bne $24, $2, checkIfGood1 // if lastKeyInput != arrowInfo from excellentIndex --> check good1
 j incrementScore2 // else score += 2
 checkIfGood1:
 bne $20, $2, checkIfGood2 // if lastKeyInput != arrowInfo from goodIndex1 --> check good2
 j incrementScore1 // else score += 1
 checkIfGood2:
-bne $22, $2, decrementScore2  // if lastKeyInput != arrowInfo from goodIndex2 --> score -= 2
+bne $21, $2, checkIfGood3 // if lastKeyInput != arrowInfo from goodIndex2 --> check good3
+j incrementScore1 // else score += 1
+checkIfGood3:
+bne $22, $2, checkIfGood4 // if lastKeyInput != arrowInfo from goodIndex3 --> check good4
+j incrementScore1 // else score += 1
+checkIfGood4:
+bne $23, $2, decrementScore  // if lastKeyInput != arrowInfo from goodIndex2 --> score -= 2
 j incrementScore1 // else score += 1
 incrementScore2:
 addi $5, $5, 2
@@ -46,8 +56,8 @@ incrementScore1:
 addi $5, $5, 1
 addi $9, $0, 2 // store 10 in goodBad register $9
 j keyPressedStateWait
-decrementScore2:
-addi $5, $5, -2
+decrementScore:
+addi $5, $5, -1
 addi $9, $0, 1 // store 01 in goodBad register $9
 j keyPressedStateWait
 keyPressedStateWait:
@@ -63,7 +73,7 @@ j keyPressedStateWait
 
 stateChange:
 addi $1, $0, 0 // reset clockCycle to 0
-addi $2, $0, noKeyInput // reset lastKeyInput to noKeyInput
+addi $2, $0, 7 // reset lastKeyInput to noKeyInput
 addi $9, $0, 0 // reset goodBad register to 00
 shiftIndexes:
 sll $8, $8, 3 // shift register $8 left 3
@@ -197,7 +207,7 @@ and $12, $4, $11
 blt $10, $12, generateRandomNumber // if the value is not within scope, get another one.
 feedNewArrow:
 addi $3, $3, 1 // increment counterSinceLastArrow
-addi $10, $0, numStatesUntilNewArrow // store numStatesUntilNewArrow in temp0
+addi $10, $0, 20 // store numStatesUntilNewArrow in temp0
 blt $3, $10, feedNOArrow // if counterSinceLastArrow < numStatesUntilNewArrow, don't feed a new arrow --> feedNOArrow
 add $3, $0, $0 // reset counterSinceLastArrow to 0
 add $6, $6, $12 // add randomNumber from $4 to lower 3 bits of screenIndexReg1 $6

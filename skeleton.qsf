@@ -208,4 +208,6 @@ set_location_assignment PIN_AB26 -to color_select[7]
 set_global_assignment -name CDF_FILE output_files/Chain2.cdf
 set_global_assignment -name CDF_FILE output_files/Chain3.cdf
 set_location_assignment PIN_AB22 -to shakeyShake1In
+set_location_assignment PIN_AC15 -to shakeyShake2In
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -127,9 +127,9 @@ module skeleton(resetn,
 	binary_to_seven_segment_converter(player1_score, seg5, seg6, seg7, seg8);
 	binary_to_seven_segment_converter(player2_score, seg1, seg2, seg3, seg4);
 	//wire [9:0] debug_sevseg1, debug_sevseg2;
-	//assign debug_sevseg1[2:0] = player1_indexes[2:0];
+	//assign debug_sevseg1[2:0] = player1_indexes[68:66];
 	//assign debug_sevseg1[9:3] = 7'b0;
-	//assign debug_sevseg2[2:0] = player1_indexes[2:0];
+	//assign debug_sevseg2[2:0] = player2_indexes[68:66];
 	//assign debug_sevseg2[9:3] = 7'b0;
 	//binary_to_seven_segment_converter(debug_sevseg1, seg5, seg6, seg7, seg8);
 	//binary_to_seven_segment_converter(debug_sevseg2, seg1, seg2, seg3, seg4);

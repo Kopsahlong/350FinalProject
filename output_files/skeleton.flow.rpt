@@ -1,5 +1,5 @@
 Flow report for skeleton
-Wed Apr 19 17:34:46 2017
+Sat Apr 22 05:13:27 2017
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 19 17:34:46 2017           ;
+; Flow Status                        ; Successful - Sat Apr 22 05:13:27 2017           ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                      ; skeleton                                        ;
 ; Top-level Entity Name              ; skeleton                                        ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 9,536 / 114,480 ( 8 % )                         ;
-;     Total combinational functions  ; 8,997 / 114,480 ( 8 % )                         ;
-;     Dedicated logic registers      ; 3,811 / 114,480 ( 3 % )                         ;
-; Total registers                    ; 3811                                            ;
+; Total logic elements               ; 10,052 / 114,480 ( 9 % )                        ;
+;     Total combinational functions  ; 9,475 / 114,480 ( 8 % )                         ;
+;     Dedicated logic registers      ; 3,817 / 114,480 ( 3 % )                         ;
+; Total registers                    ; 3817                                            ;
 ; Total pins                         ; 272 / 529 ( 51 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 524,672 / 3,981,312 ( 13 % )                    ;
+; Total memory bits                  ; 2,906,112 / 3,981,312 ( 73 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 4 / 532 ( < 1 % )                               ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                                  ;
 +------------------------------------+-------------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/19/2017 17:32:10 ;
+; Start date & time ; 04/22/2017 05:10:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; skeleton            ;
 +-------------------+---------------------+
@@ -76,9 +76,10 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 159090364333538.149263753000620       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 203178704205550.149285220105908       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
+; FITTER_EFFORT                       ; Standard Fit                          ; Auto Fit      ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
 ; MISC_FILE                           ; pll.bsf                               ; --            ; --          ; --             ;
@@ -103,12 +104,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:51     ; 1.0                     ; 1027 MB             ; 00:01:02                           ;
-; Fitter                    ; 00:01:13     ; 1.1                     ; 2006 MB             ; 00:01:59                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 794 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.6                     ; 1039 MB             ; 00:00:08                           ;
-; EDA Netlist Writer        ; 00:00:11     ; 1.0                     ; 850 MB              ; 00:00:11                           ;
-; Total                     ; 00:02:28     ; --                      ; --                  ; 00:03:24                           ;
+; Analysis & Synthesis      ; 00:00:55     ; 1.0                     ; 1063 MB             ; 00:01:04                           ;
+; Fitter                    ; 00:01:46     ; 1.1                     ; 2030 MB             ; 00:03:04                           ;
+; Assembler                 ; 00:00:08     ; 1.0                     ; 818 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:10     ; 1.7                     ; 1084 MB             ; 00:00:11                           ;
+; EDA Netlist Writer        ; 00:00:16     ; 1.0                     ; 889 MB              ; 00:00:13                           ;
+; Total                     ; 00:03:15     ; --                      ; --                  ; 00:04:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
