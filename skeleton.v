@@ -65,7 +65,7 @@ module skeleton(resetn,
 	wire [1:0] player1_good_bad, player2_good_bad;
 
 	processor player1_processor(clock, game_reset, player1_key_pressed, player1_arrow_input, player1_score, dmem_data_in_player1, dmem_address_player1, dmem_data_out_player1, player1_good_bad, player1_indexes);
-	processor player2_processor(clock, game_reset, player2_key_pressed, player2_arrow_input, player2_score, dmem_data_in_player2, dmem_address_player2, dmem_data_out_data_player2, player2_good_bad, player2_indexes);
+	processor player2_processor(clock, game_reset, player2_key_pressed, player2_arrow_input, player2_score, dmem_data_in_player2, dmem_address_player2, dmem_data_out_player2, player2_good_bad, player2_indexes);
 
 	
 	// keyboard controller
@@ -76,7 +76,7 @@ module skeleton(resetn,
 	assign player1_left  = ps2_out == 8'h1c;
 	assign player1_down  = ps2_out == 8'h1b;
 	assign player1_right = ps2_out == 8'h23;
-	assign player1_shakey_shake = 1'b0; //TODO insert shakeyshake
+	assign player1_shakey_shake = shakeyShake1In; //TODO insert shakeyshake
 	assign player1_key_pressed = (ps2_key_pressed && (player1_up || player1_left || player1_down || player1_right)) || player1_shakey_shake;
 
 	wire [2:0] player1_dec1, player1_dec2, player1_dec3, player1_dec4;
@@ -94,7 +94,7 @@ module skeleton(resetn,
 	assign player2_left  = ps2_out == 8'h6b;
 	assign player2_down  = ps2_out == 8'h72;
 	assign player2_right = ps2_out == 8'h74;
-	assign player2_shakey_shake = 1'b0; //TODO insert shakeyshake
+	assign player2_shakey_shake = 1'b0; //shakeyShake2In; //TODO insert shakeyshake
 	assign player2_key_pressed = (ps2_key_pressed && (player2_up || player2_left || player2_down || player2_right)) || player2_shakey_shake;
 
 	wire [2:0] player2_dec1, player2_dec2, player2_dec3, player2_dec4;
@@ -136,8 +136,9 @@ module skeleton(resetn,
 
 	
 	// some LEDs that you could use for debugging if you wanted
-	assign leds[7:1] = 7'b0;
-	assign leds[0] = shakeyShake1In;
+	assign leds[7:2] = 7'b0;
+	assign leds[1] = shakeyShake1In;
+	assign leds[0] = shakeyShake2In;
 		
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);
