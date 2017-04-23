@@ -50,11 +50,15 @@ module skeleton(resetn,
 	wire        player1_key_pressed, player2_key_pressed;	
 	wire [7:0]  player1_arrow_input, player2_arrow_input;
 	wire [9:0]  player1_score,       player2_score;
+	wire clockedssin1, clockedssin2;
 	
 	// clock divider (by 5, i.e., 10 MHz)
 	pll div(CLOCK_50,inclock);
 	//assign clock = CLOCK_50;
 	
+	
+	//dffe clockss1(.d(shakeyShake1In), .clk(clock), .ena(1'b1), .prn(1'b1), .clrn(~resetn), .q(clockedssin1));
+	//dffe clockss2(.d(shakeyShake2In), .clk(clock), .ena(1'b1), .prn(1'b1), .clrn(~resetn), .q(clockedssin2));
 	// UNCOMMENT FOLLOWING LINE AND COMMENT ABOVE LINE TO RUN AT 50 MHz
 	assign clock = inclock;
 	
@@ -71,12 +75,13 @@ module skeleton(resetn,
 	// keyboard controller
 	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
 
-	wire player1_up, player1_left, player1_down, player1_right, player1_shakey_shake;
+	wire player1_up, player1_left, player1_down, player1_right;
+	wire player1_shakey_shake, player2_shakey_shake;
 	assign player1_up    = ps2_out == 8'h1d;
 	assign player1_left  = ps2_out == 8'h1c;
 	assign player1_down  = ps2_out == 8'h1b;
 	assign player1_right = ps2_out == 8'h23;
-	assign player1_shakey_shake = shakeyShake1In; //TODO insert shakeyshake
+	assign player1_shakey_shake = shakeyShake1In;
 	assign player1_key_pressed = (ps2_key_pressed && (player1_up || player1_left || player1_down || player1_right)) || player1_shakey_shake;
 
 	wire [2:0] player1_dec1, player1_dec2, player1_dec3, player1_dec4;
@@ -89,16 +94,16 @@ module skeleton(resetn,
 
 
 
-	wire player2_up, player2_left, player2_down, player2_right, player2_shakey_shake;
+	wire player2_up, player2_left, player2_down, player2_right;
 	assign player2_up    = ps2_out == 8'h75;
 	assign player2_left  = ps2_out == 8'h6b;
 	assign player2_down  = ps2_out == 8'h72;
 	assign player2_right = ps2_out == 8'h74;
-	assign player2_shakey_shake = 1'b0; //shakeyShake2In; //TODO insert shakeyshake
+	assign player2_shakey_shake = shakeyShake2In;
 	assign player2_key_pressed = (ps2_key_pressed && (player2_up || player2_left || player2_down || player2_right)) || player2_shakey_shake;
 
 	wire [2:0] player2_dec1, player2_dec2, player2_dec3, player2_dec4;
-	assign player2_dec1 = player2_up    ? 3'b001 : 3'b000;
+	assign player2_dec1 = player2_up  ? 3'b001 : 3'b000;
 	assign player2_dec2 = player2_left  ? 3'b010 : player2_dec1;
 	assign player2_dec3 = player2_down  ? 3'b011 : player2_dec2;
 	assign player2_dec4 = player2_right ? 3'b100 : player2_dec3;
@@ -137,8 +142,8 @@ module skeleton(resetn,
 	
 	// some LEDs that you could use for debugging if you wanted
 	assign leds[7:2] = 7'b0;
-	assign leds[1] = shakeyShake1In;
-	assign leds[0] = shakeyShake2In;
+	assign leds[1] = player1_key_pressed;
+	assign leds[0] = player2_key_pressed;
 		
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);

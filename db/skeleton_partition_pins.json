@@ -616,6 +616,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
 					"name" : "lcd_data[0]",
 					"strict" : false
 				},
@@ -937,6 +941,10 @@
 				},
 				{
 					"name" : "ps2_data",
+					"strict" : false
+				},
+				{
+					"name" : "shakeyShake2In",
 					"strict" : false
 				},
 				{
